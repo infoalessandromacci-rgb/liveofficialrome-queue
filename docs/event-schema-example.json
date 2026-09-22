@@ -1,0 +1,35 @@
+{
+  "title": "Titolo editoriale dell'evento",
+  "content": "<p>Articolo originale di almeno 800 parole effettive...</p>",
+  "slug": "titolo-evento-roma-2026",
+  "start": "2026-09-25 21:00:00",
+  "end": "2026-09-25 23:30:00",
+  "all_day": false,
+  "timezone": "Europe/Rome",
+  "cost": "20",
+  "currency_symbol": "€",
+  "currency_position": "prefix",
+  "event_url": "https://sito-ufficiale.example/evento",
+  "category_ids": [
+    169
+  ],
+  "venue": {
+    "name": "Nome Venue",
+    "address": "Via Esempio 1",
+    "city": "Roma",
+    "zip": "00100",
+    "country": "Italy",
+    "phone": "06 000000",
+    "website": "https://venue.example/"
+  },
+  "image": {
+    "url": "https://fonte-ufficiale.example/locandina.jpg",
+    "alt": "Descrizione accessibile dell'immagine",
+    "title": "Titolo immagine"
+  },
+  "seo": {
+    "focus_keyphrase": "evento roma 2026",
+    "title": "Titolo SEO ottimizzato",
+    "meta_description": "Meta description ottimizzata."
+  }
+}
