@@ -57,12 +57,26 @@ def main():
     if not result["ready"]:
         print(json.dumps(result,ensure_ascii=False,indent=2))
         return 2
-    if not (os.environ.get("WP_IMPORTER_TOKEN") or (os.environ.get("WP_APP_USER") and os.environ.get("WP_APP_PASSWORD"))):\n        result["failed"]["configuration"]="Missing WordPress credentials. Configure WP_APP_USER and WP_APP_PASSWORD or a verified WP_IMPORTER_TOKEN."\n        print(json.dumps(result,ensure_ascii=False,indent=2))\n        return 3\n    try:\n        initial_status=request("status")\n        if initial_status.get("lock") or initial_status.get("pending_count",0):\n            raise RuntimeError("Importer busy or queue not empty; refusing unsafe batch")\n    except Exception as ex:\n        result["failed"]["preflight"]=str(ex)\n        print(json.dumps(result,ensure_ascii=False,indent=2))\n        return 3\n    for cat, candidates in pools.items():
+    if not (os.environ.get("WP_IMPORTER_TOKEN") or (os.environ.get("WP_APP_USER") and os.environ.get("WP_APP_PASSWORD"))):
+        result["failed"]["configuration"]="Missing WordPress credentials. Configure WP_APP_USER and WP_APP_PASSWORD or a verified WP_IMPORTER_TOKEN."
+        print(json.dumps(result,ensure_ascii=False,indent=2))
+        return 3
+    try:
+        initial_status=request("status")
+        if initial_status.get("lock") or initial_status.get("pending_count",0):
+            raise RuntimeError("Importer busy or queue not empty; refusing unsafe batch")
+    except Exception as ex:
+        result["failed"]["preflight"]=str(ex)
+        print(json.dumps(result,ensure_ascii=False,indent=2))
+        return 3
+    for cat, candidates in pools.items():
         for path in candidates:
             queued=None
             try:
                 queued=publish_candidate(path)
-                success=False\n                before=initial_status.get("processed",{}).get(queued)\n                if before:raise RuntimeError("Queue item was already processed; refuse stale success")
+                success=False
+                before=initial_status.get("processed",{}).get(queued)
+                if before:raise RuntimeError("Queue item was already processed; refuse stale success")
                 for attempt in range(a.max_retries):
                     try:request("run",method="POST",payload={})
                     except urllib.error.HTTPError as ex:
