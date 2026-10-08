@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-08T18:34:05.553757+00:00",
+  "run_id": "37825271287",
+  "checked_commit": "8838b51a64377a94314802dbbdcdb1a15c443728",
+  "steps": {
+    "compile": "success",
+    "unit_tests": "failure",
+    "wordpress_preflight": "skipped"
+  },
+  "healthy": false,
+  "publishing_performed": false
+}
