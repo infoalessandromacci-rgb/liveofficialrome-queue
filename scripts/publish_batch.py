@@ -261,6 +261,7 @@ def main():
     mode.add_argument("--preflight", action="store_true", help="test credentials without publishing")
     parser.add_argument("--max-retries", type=int, default=3)
     parser.add_argument("--poll-seconds", type=int, default=10)
+    parser.add_argument("--resume-report", help="Previous audited failed batch report for verified resume")
     parser.add_argument("--start", help="first event date, YYYY-MM-DD")
     parser.add_argument("--end", help="last event date, YYYY-MM-DD")
     args = parser.parse_args()
@@ -277,6 +278,31 @@ def main():
             report["status"] = "CONNECTED"
         else:
             existing = load(ROOT / "data/active-events-index.json").get("events", [])
+            if args.resume_report:
+                if not args.apply:
+                    raise BatchFailure("Resume is only permitted with --apply")
+                prior_path = ROOT / args.resume_report
+                if prior_path.resolve() != (ROOT / "data/batch-run-report.json").resolve():
+                    raise BatchFailure("Only the committed previous batch report can authorize resume")
+                prior = load(prior_path)
+                if prior.get("mode") != "publish" or prior.get("status") not in ("HALTED", "PARTIAL"):
+                    raise BatchFailure("Previous report is not an interrupted publication batch")
+                for category_name, record in (prior.get("published") or {}).items():
+                    if category_name not in CATEGORIES.values():
+                        raise BatchFailure("Unknown prior category")
+                    post_id = record.get("post_id")
+                    entry = next((x for x in existing if x.get("post_id") == post_id), None)
+                    if not entry or CATEGORIES[entry["category_ids"][0]] != category_name:
+                        raise BatchFailure("Prior published event missing from active index")
+                    live = api("/tribe/events/v1/events/" + str(post_id))
+                    if live.get("status") != "publish" or urlkey(live.get("url")) != urlkey(record.get("url")):
+                        raise BatchFailure("Prior event not independently verified on WordPress")
+                    if {x.get("id") for x in (live.get("categories") or [])} != set(entry["category_ids"]):
+                        raise BatchFailure("Prior event WordPress category does not match")
+                    if not (live.get("image") or {}).get("id") or words(live.get("description")) < 800:
+                        raise BatchFailure("Prior event image or article missing")
+                    report["published"][category_name] = record
+                report["resumed_from_run_id"] = prior.get("github_run_id")
             start = dt.date.fromisoformat(args.start) if args.start else None
             end = dt.date.fromisoformat(args.end) if args.end else None
             if args.apply and start is None:
@@ -288,7 +314,8 @@ def main():
             report["week_end"] = end.isoformat() if end else None
             pools, report["rejected"] = select_candidates(ROOT, existing, start, end)
             report["available"] = {CATEGORIES[k]: len(v) for k, v in pools.items()}
-            if not all(pools.values()):
+            required = [category for category in CATEGORIES if CATEGORIES[category] not in report["published"]]
+            if not all(pools[category] for category in required):
                 report["status"] = "NOT_READY"
                 # Dry-run with no candidates is an informational result, not a broken workflow.
                 result_code = 2 if args.apply else 0
@@ -298,6 +325,8 @@ def main():
                 report["connection"] = preflight()
                 git("pull", "--ff-only", "origin", "main")
                 for category, pool in pools.items():
+                    if CATEGORIES[category] in report["published"]:
+                        continue
                     completed = False
                     for path, event in pool:
                         result = process(path, event, args.max_retries, args.poll_seconds)
