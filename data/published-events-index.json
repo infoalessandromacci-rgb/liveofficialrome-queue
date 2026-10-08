@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "generated_on": "2026-10-08",
   "source": "Live Official Rome WordPress — published tribe_events",
-  "total_events": 258,
-  "active_or_future_events": 99,
+  "total_events": 263,
+  "active_or_future_events": 104,
   "purpose": "Pre-filter anti-duplicate before researching, writing or queueing new events.",
   "match_policy": {
     "hard_duplicate": [
@@ -2159,6 +2159,34 @@
       }
     },
     {
+      "post_id": 5714,
+      "title": "Luchino Visconti rivive a Castel Sant’Angelo con una mostra sul cinema e la storia",
+      "slug": "luchino-visconti-messa-in-scena-storia-castel-santangelo-roma-2026",
+      "start": "2026-10-16 09:00:00",
+      "end": "2026-11-29 19:30:00",
+      "start_day": "2026-10-16",
+      "start_time": "09:00:00",
+      "venue_id": 5713,
+      "venue": "Museo Nazionale di Castel Sant’Angelo",
+      "category_ids": [
+        271
+      ],
+      "event_url": "https://www.romacinemafest.it/it/luchino-visconti-e-la-messa-in-scena-della-storia/",
+      "focus_keyphrase": "Luchino Visconti Castel Sant’Angelo 2026",
+      "normalized": {
+        "title": "luchino visconti rivive a castel sant angelo con una mostra sul cinema e la storia",
+        "focus": "luchino visconti castel sant angelo 2026",
+        "venue": "museo nazionale di castel sant angelo",
+        "event_url": "romacinemafest.it/it/luchino-visconti-e-la-messa-in-scena-della-storia"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-16 09:00:00|museo nazionale di castel sant angelo",
+        "day_venue": "2026-10-16|museo nazionale di castel sant angelo",
+        "focus_day": "luchino visconti castel sant angelo 2026|2026-10-16",
+        "url": "romacinemafest.it/it/luchino-visconti-e-la-messa-in-scena-della-storia"
+      }
+    },
+    {
       "post_id": 5610,
       "title": "Festival Europeo della Pedagogia del Bello trasforma via Col di Lana in uno spazio educativo diffuso",
       "slug": "festival-europeo-pedagogia-bello-roma-2026",
@@ -2187,6 +2215,34 @@
       }
     },
     {
+      "post_id": 5717,
+      "title": "La Giornata Mondiale dell’Alimentazione 2026 riunisce a Roma la FAO e le agenzie delle Nazioni Unite",
+      "slug": "giornata-mondiale-alimentazione-2026-roma-fao-16-ottobre",
+      "start": "2026-10-16 10:00:00",
+      "end": "2026-10-16 12:00:00",
+      "start_day": "2026-10-16",
+      "start_time": "10:00:00",
+      "venue_id": 5716,
+      "venue": "FAO Headquarters",
+      "category_ids": [
+        270
+      ],
+      "event_url": "https://www.fao.org/webcast/detail/world-food-day-ceremony/en",
+      "focus_keyphrase": "Giornata Mondiale dell’Alimentazione 2026 Roma",
+      "normalized": {
+        "title": "la giornata mondiale dell alimentazione 2026 riunisce a roma la fao e le agenzie delle nazioni unite",
+        "focus": "giornata mondiale dell alimentazione 2026 roma",
+        "venue": "fao headquarters",
+        "event_url": "fao.org/webcast/detail/world-food-day-ceremony/en"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-16 10:00:00|fao headquarters",
+        "day_venue": "2026-10-16|fao headquarters",
+        "focus_day": "giornata mondiale dell alimentazione 2026 roma|2026-10-16",
+        "url": "fao.org/webcast/detail/world-food-day-ceremony/en"
+      }
+    },
+    {
       "post_id": 5652,
       "title": "Sophie Calle al MAXXI con Matrimoni Rotture e Funerali inclusi",
       "slug": "sophie-calle-maxxi-roma-matrimoni-rotture-funerali-2026",
@@ -2212,6 +2268,34 @@
         "day_venue": "2026-10-16|maxxi museo nazionale delle arti del xxi secolo",
         "focus_day": "sophie calle maxxi roma|2026-10-16",
         "url": "maxxi.art/events/sophie-calle-matrimoni-rotture-e-funerali-inclusi"
+      }
+    },
+    {
+      "post_id": 5711,
+      "title": "Paweł Pawlikowski incontra il pubblico della Festa del Cinema di Roma in una Masterclass",
+      "slug": "pawel-pawlikowski-masterclass-festa-cinema-roma-16-ottobre-2026",
+      "start": "2026-10-16 16:30:00",
+      "end": "2026-10-16 18:00:00",
+      "start_day": "2026-10-16",
+      "start_time": "16:30:00",
+      "venue_id": 3316,
+      "venue": "Auditorium Parco della Musica Ennio Morricone, Sala Petrassi",
+      "category_ids": [
+        268
+      ],
+      "event_url": "https://www.romacinemafest.it/it/pawel-pawlikowski-e-rodrigo-sorogoyen/",
+      "focus_keyphrase": "Paweł Pawlikowski Roma 2026",
+      "normalized": {
+        "title": "pawe pawlikowski incontra il pubblico della festa del cinema di roma in una masterclass",
+        "focus": "pawe pawlikowski roma 2026",
+        "venue": "auditorium parco della musica ennio morricone sala petrassi",
+        "event_url": "romacinemafest.it/it/pawel-pawlikowski-e-rodrigo-sorogoyen"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-16 16:30:00|auditorium parco della musica ennio morricone sala petrassi",
+        "day_venue": "2026-10-16|auditorium parco della musica ennio morricone sala petrassi",
+        "focus_day": "pawe pawlikowski roma 2026|2026-10-16",
+        "url": "romacinemafest.it/it/pawel-pawlikowski-e-rodrigo-sorogoyen"
       }
     },
     {
@@ -2383,6 +2467,34 @@
       }
     },
     {
+      "post_id": 5706,
+      "title": "Irina Rimes porta Descântatele all’Orion Live Club di Roma",
+      "slug": "irina-rimes-descantatele-orion-live-club-roma-17-ottobre-2026",
+      "start": "2026-10-17 19:00:00",
+      "end": "2026-10-17 21:30:00",
+      "start_day": "2026-10-17",
+      "start_time": "19:00:00",
+      "venue_id": 5524,
+      "venue": "Orion Live Club",
+      "category_ids": [
+        169
+      ],
+      "event_url": "https://www.orionliveclub.com/js_events/irina-rimes/",
+      "focus_keyphrase": "Irina Rimes Roma 2026",
+      "normalized": {
+        "title": "irina rimes porta descantatele all orion live club di roma",
+        "focus": "irina rimes roma 2026",
+        "venue": "orion live club",
+        "event_url": "orionliveclub.com/js_events/irina-rimes"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-17 19:00:00|orion live club",
+        "day_venue": "2026-10-17|orion live club",
+        "focus_day": "irina rimes roma 2026|2026-10-17",
+        "url": "orionliveclub.com/js_events/irina-rimes"
+      }
+    },
+    {
       "post_id": 2667,
       "title": "Max Maglione a Roma 2026: Siamo tutti s-connessi al Teatro Golden",
       "slug": "max-maglione-a-roma-2026-siamo-tutti-s-connessi-al-teatro-golden",
@@ -2464,6 +2576,34 @@
         "day_venue": "2026-10-17|soap house",
         "focus_day": "2000 power roma 2026|2026-10-17",
         "url": "spotlightapp.eu/event/cc44d328-99c3-4e07-9b6b-a667643b0b5a"
+      }
+    },
+    {
+      "post_id": 5709,
+      "title": "MINÛ porta Zombies In Miami al Circolo degli Illuminati per una notte tra house techno e disco",
+      "slug": "minu-zombies-in-miami-circolo-illuminati-roma-17-ottobre-2026",
+      "start": "2026-10-17 23:00:00",
+      "end": "2026-10-18 06:00:00",
+      "start_day": "2026-10-17",
+      "start_time": "23:00:00",
+      "venue_id": 5708,
+      "venue": "Circolo degli Illuminati",
+      "category_ids": [
+        269
+      ],
+      "event_url": "https://technobeatscloud.com/en/events/event/minu-zombies-in-miami-circolo-degli-illuminati-2026-10-17",
+      "focus_keyphrase": "Zombies In Miami Roma 2026",
+      "normalized": {
+        "title": "minu porta zombies in miami al circolo degli illuminati per una notte tra house techno e disco",
+        "focus": "zombies in miami roma 2026",
+        "venue": "circolo degli illuminati",
+        "event_url": "technobeatscloud.com/en/events/event/minu-zombies-in-miami-circolo-degli-illuminati-2026-10-17"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-17 23:00:00|circolo degli illuminati",
+        "day_venue": "2026-10-17|circolo degli illuminati",
+        "focus_day": "zombies in miami roma 2026|2026-10-17",
+        "url": "technobeatscloud.com/en/events/event/minu-zombies-in-miami-circolo-degli-illuminati-2026-10-17"
       }
     },
     {
@@ -9364,6 +9504,34 @@
       }
     },
     {
+      "post_id": 5714,
+      "title": "Luchino Visconti rivive a Castel Sant’Angelo con una mostra sul cinema e la storia",
+      "slug": "luchino-visconti-messa-in-scena-storia-castel-santangelo-roma-2026",
+      "start": "2026-10-16 09:00:00",
+      "end": "2026-11-29 19:30:00",
+      "start_day": "2026-10-16",
+      "start_time": "09:00:00",
+      "venue_id": 5713,
+      "venue": "Museo Nazionale di Castel Sant’Angelo",
+      "category_ids": [
+        271
+      ],
+      "event_url": "https://www.romacinemafest.it/it/luchino-visconti-e-la-messa-in-scena-della-storia/",
+      "focus_keyphrase": "Luchino Visconti Castel Sant’Angelo 2026",
+      "normalized": {
+        "title": "luchino visconti rivive a castel sant angelo con una mostra sul cinema e la storia",
+        "focus": "luchino visconti castel sant angelo 2026",
+        "venue": "museo nazionale di castel sant angelo",
+        "event_url": "romacinemafest.it/it/luchino-visconti-e-la-messa-in-scena-della-storia"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-16 09:00:00|museo nazionale di castel sant angelo",
+        "day_venue": "2026-10-16|museo nazionale di castel sant angelo",
+        "focus_day": "luchino visconti castel sant angelo 2026|2026-10-16",
+        "url": "romacinemafest.it/it/luchino-visconti-e-la-messa-in-scena-della-storia"
+      }
+    },
+    {
       "post_id": 5610,
       "title": "Festival Europeo della Pedagogia del Bello trasforma via Col di Lana in uno spazio educativo diffuso",
       "slug": "festival-europeo-pedagogia-bello-roma-2026",
@@ -9392,6 +9560,34 @@
       }
     },
     {
+      "post_id": 5717,
+      "title": "La Giornata Mondiale dell’Alimentazione 2026 riunisce a Roma la FAO e le agenzie delle Nazioni Unite",
+      "slug": "giornata-mondiale-alimentazione-2026-roma-fao-16-ottobre",
+      "start": "2026-10-16 10:00:00",
+      "end": "2026-10-16 12:00:00",
+      "start_day": "2026-10-16",
+      "start_time": "10:00:00",
+      "venue_id": 5716,
+      "venue": "FAO Headquarters",
+      "category_ids": [
+        270
+      ],
+      "event_url": "https://www.fao.org/webcast/detail/world-food-day-ceremony/en",
+      "focus_keyphrase": "Giornata Mondiale dell’Alimentazione 2026 Roma",
+      "normalized": {
+        "title": "la giornata mondiale dell alimentazione 2026 riunisce a roma la fao e le agenzie delle nazioni unite",
+        "focus": "giornata mondiale dell alimentazione 2026 roma",
+        "venue": "fao headquarters",
+        "event_url": "fao.org/webcast/detail/world-food-day-ceremony/en"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-16 10:00:00|fao headquarters",
+        "day_venue": "2026-10-16|fao headquarters",
+        "focus_day": "giornata mondiale dell alimentazione 2026 roma|2026-10-16",
+        "url": "fao.org/webcast/detail/world-food-day-ceremony/en"
+      }
+    },
+    {
       "post_id": 5652,
       "title": "Sophie Calle al MAXXI con Matrimoni Rotture e Funerali inclusi",
       "slug": "sophie-calle-maxxi-roma-matrimoni-rotture-funerali-2026",
@@ -9417,6 +9613,34 @@
         "day_venue": "2026-10-16|maxxi museo nazionale delle arti del xxi secolo",
         "focus_day": "sophie calle maxxi roma|2026-10-16",
         "url": "maxxi.art/events/sophie-calle-matrimoni-rotture-e-funerali-inclusi"
+      }
+    },
+    {
+      "post_id": 5711,
+      "title": "Paweł Pawlikowski incontra il pubblico della Festa del Cinema di Roma in una Masterclass",
+      "slug": "pawel-pawlikowski-masterclass-festa-cinema-roma-16-ottobre-2026",
+      "start": "2026-10-16 16:30:00",
+      "end": "2026-10-16 18:00:00",
+      "start_day": "2026-10-16",
+      "start_time": "16:30:00",
+      "venue_id": 3316,
+      "venue": "Auditorium Parco della Musica Ennio Morricone, Sala Petrassi",
+      "category_ids": [
+        268
+      ],
+      "event_url": "https://www.romacinemafest.it/it/pawel-pawlikowski-e-rodrigo-sorogoyen/",
+      "focus_keyphrase": "Paweł Pawlikowski Roma 2026",
+      "normalized": {
+        "title": "pawe pawlikowski incontra il pubblico della festa del cinema di roma in una masterclass",
+        "focus": "pawe pawlikowski roma 2026",
+        "venue": "auditorium parco della musica ennio morricone sala petrassi",
+        "event_url": "romacinemafest.it/it/pawel-pawlikowski-e-rodrigo-sorogoyen"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-16 16:30:00|auditorium parco della musica ennio morricone sala petrassi",
+        "day_venue": "2026-10-16|auditorium parco della musica ennio morricone sala petrassi",
+        "focus_day": "pawe pawlikowski roma 2026|2026-10-16",
+        "url": "romacinemafest.it/it/pawel-pawlikowski-e-rodrigo-sorogoyen"
       }
     },
     {
@@ -9588,6 +9812,34 @@
       }
     },
     {
+      "post_id": 5706,
+      "title": "Irina Rimes porta Descântatele all’Orion Live Club di Roma",
+      "slug": "irina-rimes-descantatele-orion-live-club-roma-17-ottobre-2026",
+      "start": "2026-10-17 19:00:00",
+      "end": "2026-10-17 21:30:00",
+      "start_day": "2026-10-17",
+      "start_time": "19:00:00",
+      "venue_id": 5524,
+      "venue": "Orion Live Club",
+      "category_ids": [
+        169
+      ],
+      "event_url": "https://www.orionliveclub.com/js_events/irina-rimes/",
+      "focus_keyphrase": "Irina Rimes Roma 2026",
+      "normalized": {
+        "title": "irina rimes porta descantatele all orion live club di roma",
+        "focus": "irina rimes roma 2026",
+        "venue": "orion live club",
+        "event_url": "orionliveclub.com/js_events/irina-rimes"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-17 19:00:00|orion live club",
+        "day_venue": "2026-10-17|orion live club",
+        "focus_day": "irina rimes roma 2026|2026-10-17",
+        "url": "orionliveclub.com/js_events/irina-rimes"
+      }
+    },
+    {
       "post_id": 2667,
       "title": "Max Maglione a Roma 2026: Siamo tutti s-connessi al Teatro Golden",
       "slug": "max-maglione-a-roma-2026-siamo-tutti-s-connessi-al-teatro-golden",
@@ -9669,6 +9921,34 @@
         "day_venue": "2026-10-17|soap house",
         "focus_day": "2000 power roma 2026|2026-10-17",
         "url": "spotlightapp.eu/event/cc44d328-99c3-4e07-9b6b-a667643b0b5a"
+      }
+    },
+    {
+      "post_id": 5709,
+      "title": "MINÛ porta Zombies In Miami al Circolo degli Illuminati per una notte tra house techno e disco",
+      "slug": "minu-zombies-in-miami-circolo-illuminati-roma-17-ottobre-2026",
+      "start": "2026-10-17 23:00:00",
+      "end": "2026-10-18 06:00:00",
+      "start_day": "2026-10-17",
+      "start_time": "23:00:00",
+      "venue_id": 5708,
+      "venue": "Circolo degli Illuminati",
+      "category_ids": [
+        269
+      ],
+      "event_url": "https://technobeatscloud.com/en/events/event/minu-zombies-in-miami-circolo-degli-illuminati-2026-10-17",
+      "focus_keyphrase": "Zombies In Miami Roma 2026",
+      "normalized": {
+        "title": "minu porta zombies in miami al circolo degli illuminati per una notte tra house techno e disco",
+        "focus": "zombies in miami roma 2026",
+        "venue": "circolo degli illuminati",
+        "event_url": "technobeatscloud.com/en/events/event/minu-zombies-in-miami-circolo-degli-illuminati-2026-10-17"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-17 23:00:00|circolo degli illuminati",
+        "day_venue": "2026-10-17|circolo degli illuminati",
+        "focus_day": "zombies in miami roma 2026|2026-10-17",
+        "url": "technobeatscloud.com/en/events/event/minu-zombies-in-miami-circolo-degli-illuminati-2026-10-17"
       }
     },
     {
