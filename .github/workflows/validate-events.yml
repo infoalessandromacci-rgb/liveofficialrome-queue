@@ -1,12 +1,6 @@
 name: Validate Live Official Rome 5-category batch
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'candidates/**'
-      - 'data/active-events-index.json'
-      - 'scripts/validate_batch.py'
-      - '.github/workflows/validate-events.yml'
 permissions:
   contents: read
 jobs:
