@@ -73,7 +73,12 @@ def commit_push(message):
     if not git("status", "--porcelain").strip():
         return
     git("commit", "-m", message)
-    git("push", "origin", "HEAD:main")
+    try:
+        git("push", "origin", "HEAD:main")
+    except BatchFailure:
+        # One safe rebase retry; never force-push or overwrite concurrent work.
+        git("pull", "--rebase", "origin", "main")
+        git("push", "origin", "HEAD:main")
 
 
 def write_json(path, obj):
@@ -220,8 +225,11 @@ def process(path, event, retries, poll_seconds):
     for attempt in range(retries):
         try:
             api("/lor-importer/v1/run", method="POST", payload={})
-        except BatchFailure:
-            # A transient error can occur even after the importer processed the queue.
+        except BatchFailure as exc:
+            if "HTTP 401" in str(exc) or "HTTP 403" in str(exc):
+                raise UncertainImport("WordPress refused importer authorization; preserve queue item.") from exc
+            # A transient response error may occur after WordPress processed the queue.
+            # Read status before retrying, never assume that no publication occurred.
             pass
         status = api("/lor-importer/v1/status")
         record = (status.get("processed") or {}).get(queued)
@@ -261,6 +269,13 @@ def main():
             existing = load(ROOT / "data/active-events-index.json").get("events", [])
             start = dt.date.fromisoformat(args.start) if args.start else None
             end = dt.date.fromisoformat(args.end) if args.end else None
+            if args.apply and start is None:
+                today = dt.datetime.now(ZoneInfo("Europe/Rome")).date()
+                start = today + dt.timedelta(days=7-today.weekday())
+                if end is None:
+                    end = start + dt.timedelta(days=6)
+            report["week_start"] = start.isoformat() if start else None
+            report["week_end"] = end.isoformat() if end else None
             pools, report["rejected"] = select_candidates(ROOT, existing, start, end)
             report["available"] = {CATEGORIES[k]: len(v) for k, v in pools.items()}
             if not all(pools.values()):
