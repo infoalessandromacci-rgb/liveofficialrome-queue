@@ -1,0 +1,8 @@
+{
+  "status": "RECOVERED",
+  "failed_slug": "satyrus-sunglass-closing-party-villa-borghese-16-ottobre-2026",
+  "old_queue": "queue/batch-5c31a10e07a1-2026-10-08-controller-03-satyrus-sunglass-16-ottobre.json",
+  "reason": "Numero massimo di tentativi raggiunto.",
+  "discarded_post": false,
+  "recovery_time": "2026-10-08T19:00:39.989980+00:00"
+}
