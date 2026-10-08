@@ -1,0 +1,32 @@
+name: Recover a definitively failed importer item
+on:
+  push:
+    branches: [main]
+    paths:
+      - "control/recovery-request.json"
+permissions:
+  contents: write
+concurrency:
+  group: liveofficialrome-importer
+  cancel-in-progress: false
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Configure Git
+        run: |
+          git config user.name "live-rome-recovery[bot]"
+          git config user.email "live-rome-recovery@users.noreply.github.com"
+      - name: Verify WordPress and archive definitively failed item
+        env:
+          WP_APP_USER: ${{ secrets.WP_APP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        run: python scripts/recover_failed.py
