@@ -1,0 +1,63 @@
+name: Diagnose Live Official Rome importer queue
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/importer-diagnostic.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: liveofficialrome-importer-diagnostics
+  cancel-in-progress: false
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Read importer status without publishing or deleting
+        env:
+          WP_APP_USER: ${{ secrets.WP_APP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        run: |
+          python - <<'PY'
+          import datetime, json, os, pathlib, sys
+          sys.path.insert(0, "scripts")
+          from publish_batch import api
+          status = api("/lor-importer/v1/status")
+          queue = api("/lor-importer/v1/status").get("pending", [])
+          out = {
+            "checked_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            "last_run": status.get("last_result"),
+            "errors": status.get("errors"),
+            "attempts": status.get("attempts"),
+            "pending_count": status.get("pending_count"),
+            "pending": queue,
+            "stale_processed_count": status.get("stale_processed_count"),
+            "stale_processed": status.get("stale_processed"),
+            "lock": status.get("lock"),
+            "last_run_mode": status.get("last_run_mode"),
+            "processed_batch": {k:v for k,v in status.get("processed",{}).items()
+                                if "2026-10-08-controller-" in k},
+          }
+          target = pathlib.Path("data/importer-diagnostic.json")
+          target.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          print(json.dumps(out,ensure_ascii=False,indent=2)[:12000])
+          PY
+      - name: Save diagnostic snapshot
+        if: always()
+        run: |
+          git config user.name "live-rome-diagnostic[bot]"
+          git config user.email "live-rome-diagnostic@users.noreply.github.com"
+          git add data/importer-diagnostic.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Record importer diagnostic (read only)"
+            git push origin HEAD:main || (git pull --rebase origin main && git push origin HEAD:main)
+          fi
