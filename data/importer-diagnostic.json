@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-10-08T18:56:35.912846+00:00",
+  "last_run": {
+    "time": "2026-10-08 18:55:20",
+    "counts": {
+      "published": 0,
+      "duplicate": 0,
+      "failed": 1,
+      "already_processed": 0
+    },
+    "stale_processed": [],
+    "error_count": 1
+  },
+  "errors": {
+    "queue/batch-5c31a10e07a1-2026-10-08-controller-03-satyrus-sunglass-16-ottobre.json": {
+      "message": "Numero massimo di tentativi raggiunto.",
+      "time": "2026-10-08 18:55:20",
+      "sha": "2ea55b147f7cf0aabc65ade5905f785f329d3b5e",
+      "attempts": 2
+    }
+  },
+  "attempts": {
+    "queue/2026-09-29-wanderlust-108-roma.json": 2,
+    "queue/2026-09-29-wanderlust-108-roma-retry.json": 2,
+    "queue/2026-09-29-clubbing-artichoke-neo-club-3-ottobre-2026.json": 2,
+    "queue/2026-09-29-elisa-montessori-villa-torlonia-30-settembre-2026.json": 2,
+    "queue/2026-09-29-fat-freddys-drop-atlantico-1-ottobre-2026.json": 2,
+    "queue/2026-09-30-1900-batch-club-mostre-eventi.json": 2,
+    "queue/2026-09-30-1900-teatro-muette.json": 2,
+    "queue/2026-10-01-2100-il-viaggio-di-francesco.json": 1,
+    "queue/2026-10-01-2100-rom-e-2026.json": 1,
+    "queue/2026-10-04-maker-faire-rome-23-ottobre-2026.json": 2,
+    "queue/2026-10-04-2100-maker-faire-rome-23-ottobre.json": 1,
+    "queue/2026-10-04-2100-uragano-revue-9-ottobre.json": 1,
+    "queue/2026-10-05-sten-lex-paesaggi-industriali-15-ottobre-2026.json": 2,
+    "queue/2026-10-05-sunglass-closing-party-satyrus-16-ottobre-2026.json": 2,
+    "queue/2026-10-05-welfair-fiera-roma-14-ottobre-2026.json": 2,
+    "queue/2026-10-05-sunglass-closing-party-satyrus-16-ottobre-2026-v2.json": 2,
+    "queue/2026-10-05-rebel-rebel-blawan-cieloterra-16-ottobre-2026.json": 2,
+    "queue/2026-10-05-1600-sunglass-closing-party-16-ottobre-2026.json": 2,
+    "queue/2026-10-08-test-http-sha.json@0f0d5e1072afc54eaa94671fbf981f0f4995911e": 2,
+    "queue/2026-10-08-test-sha-v121.json@bcf0d475bc62066d3f613bf926bac63b020c064b": 2,
+    "queue/batch-5c31a10e07a1-2026-10-08-controller-03-satyrus-sunglass-16-ottobre.json@2ea55b147f7cf0aabc65ade5905f785f329d3b5e": 2
+  },
+  "pending_count": 1,
+  "pending": [
+    {
+      "path": "queue/batch-5c31a10e07a1-2026-10-08-controller-03-satyrus-sunglass-16-ottobre.json",
+      "sha": "2ea55b147f7cf0aabc65ade5905f785f329d3b5e",
+      "attempts": 2
+    }
+  ],
+  "stale_processed_count": 0,
+  "stale_processed": [],
+  "lock": false,
+  "last_run_mode": "manual",
+  "processed_batch": {
+    "queue/batch-1ca09b609f6a-2026-10-08-controller-01-speed-stroke-traffic-17-ottobre.json": {
+      "sha": "f06d59c521c1af608d55fbe6454542e7f2d659a6",
+      "post_id": 5740,
+      "status": "published",
+      "url": "https://www.liveofficialrome.it/event/speed-stroke-damage-control-tour-traffic-roma-17-ottobre-2026/",
+      "time": "2026-10-08 18:54:24"
+    },
+    "queue/batch-987fac30ead2-2026-10-08-controller-02-pazzo-arte-torlonia-15-ottobre.json": {
+      "sha": "8b5825ed335527a337b04e46383a49ecb5498885",
+      "post_id": 5743,
+      "status": "published",
+      "url": "https://www.liveofficialrome.it/event/pazzo-ad-arte-giuseppe-pestillo-teatro-torlonia-15-ottobre-2026/",
+      "time": "2026-10-08 18:54:42"
+    }
+  }
+}
