@@ -222,11 +222,12 @@ def finish(path, queue_name, outcome, event=None, post_id=None):
 
 
 def process(path, event, retries, poll_seconds):
+    # A WordPress cron may import immediately when the queue commit reaches GitHub.
+    # Take the baseline BEFORE committing; never misclassify fast publication as stale.
+    before = api("/lor-importer/v1/status").get("processed", {})
     queued = stage(path)
-    # The unique queue filename cannot inherit a stale importer result.
-    previous = api("/lor-importer/v1/status").get("processed", {}).get(queued)
-    if previous:
-        raise UncertainImport("Queue key was already processed; abort to avoid false success.")
+    if queued in before:
+        raise UncertainImport("Queue key already present before staging; refuse reuse.")
     record = None
     for attempt in range(retries):
         try:
