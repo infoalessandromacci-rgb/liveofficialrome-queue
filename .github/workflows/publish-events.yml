@@ -30,6 +30,8 @@ jobs:
       - name: Validate and publish
         env:
           WP_IMPORTER_TOKEN: ${{ secrets.WP_IMPORTER_TOKEN }}
+          WP_APP_USER: ${{ secrets.WP_APP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
         run: |
           if [ "${{ inputs.apply }}" = "true" ]; then
             python scripts/publish_batch.py --apply
