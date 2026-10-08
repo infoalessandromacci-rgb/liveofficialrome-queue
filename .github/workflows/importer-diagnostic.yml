@@ -1,4 +1,5 @@
 name: Diagnose Live Official Rome importer queue
+# Recheck Nubes importer outcome after the second controller run
 on:
   push:
     branches: [main]
