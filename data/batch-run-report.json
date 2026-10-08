@@ -1,6 +1,6 @@
 {
   "mode": "publish",
-  "status": "PARTIAL",
+  "status": "COMPLETE",
   "published": {
     "Concerti e Live": {
       "status": "published",
@@ -41,27 +41,34 @@
       "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/portada-Giorgia-Angiuli.webp",
       "words": 1102,
       "seo_verified": true
+    },
+    "Eventi e Manifestazioni": {
+      "status": "published",
+      "candidate": "2026-10-08-controller-05-ottobrata-palazzo-massimo-17-ottobre.json",
+      "post_id": 5752,
+      "url": "https://www.liveofficialrome.it/event/ottobrata-romana-palazzo-massimo-apertura-serale-17-ottobre-2026/",
+      "category": "Eventi e Manifestazioni",
+      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/Ottobrata20romana20a20Palazzo20Massimo20copertina.png",
+      "words": 1145,
+      "seo_verified": true
     }
   },
   "rejected": [],
-  "failures": {
-    "2026-10-08-controller-05-mit-contemporaneo-17-ottobre.json": "failed",
-    "Eventi e Manifestazioni": "No confirmed publication"
-  },
+  "failures": {},
   "auth_config": {
     "app_user_present": true,
     "app_password_present": true,
     "bearer_present": false
   },
-  "generated_at": "2026-10-08T19:08:35.288201+00:00",
-  "resumed_from_run_id": "37828920433",
+  "generated_at": "2026-10-08T19:11:42.397045+00:00",
+  "resumed_from_run_id": "37829692557",
   "week_start": "2026-10-12",
   "week_end": "2026-10-18",
   "available": {
     "Concerti e Live": 0,
     "Teatro e Cinema": 0,
-    "Disco e Club": 1,
-    "Musei e Mostre": 1,
+    "Disco e Club": 0,
+    "Musei e Mostre": 0,
     "Eventi e Manifestazioni": 1
   },
   "connection": {
@@ -69,7 +76,7 @@
     "importer_version": "1.2.1",
     "pending_count": 0
   },
-  "count": 4,
-  "github_run_id": "37829692557",
+  "count": 5,
+  "github_run_id": "37830088818",
   "github_trigger": "push"
 }
