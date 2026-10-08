@@ -156,7 +156,7 @@ class ControllerTests(unittest.TestCase):
             "categories": [{"id": 169}], "image": None,
             "website": candidate["event_url"], "description": candidate["content"],
         }
-        with patch.object(pub, "api", side_effect=[event_response, {}]):
+        with patch.object(pub, "api", side_effect=[event_response, {"status": "publish"}]):
             with self.assertRaisesRegex(pub.BatchFailure, "featured image"):
                 pub.verify_published(candidate, record)
 
