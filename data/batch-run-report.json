@@ -32,12 +32,13 @@
     "app_password_present": true,
     "bearer_present": false
   },
-  "generated_at": "2026-10-08T18:54:13.863242+00:00",
+  "generated_at": "2026-10-08T19:02:28.990313+00:00",
+  "resumed_from_run_id": "37827847195",
   "week_start": "2026-10-12",
   "week_end": "2026-10-18",
   "available": {
-    "Concerti e Live": 1,
-    "Teatro e Cinema": 1,
+    "Concerti e Live": 0,
+    "Teatro e Cinema": 0,
     "Disco e Club": 1,
     "Musei e Mostre": 1,
     "Eventi e Manifestazioni": 1
@@ -47,6 +48,6 @@
     "importer_version": "1.2.1",
     "pending_count": 0
   },
-  "github_run_id": "37827847195",
+  "github_run_id": "37828920433",
   "github_trigger": "push"
 }
