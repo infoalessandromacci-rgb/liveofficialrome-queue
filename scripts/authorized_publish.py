@@ -32,11 +32,11 @@ def main():
         print("No valid publication authorization:", str(exc), file=sys.stderr)
         return 3
     print("Authorized one-shot test batch:", data["batch_id"], start, end, flush=True)
-    result = subprocess.run(
-        [sys.executable, str(ROOT / "scripts/publish_batch.py"),
-         "--apply", "--start", start.isoformat(), "--end", end.isoformat()],
-        cwd=ROOT, check=False,
-    )
+    command = [sys.executable, str(ROOT / "scripts/publish_batch.py"),
+               "--apply", "--start", start.isoformat(), "--end", end.isoformat()]
+    if data.get("resume") is True:
+        command.extend(["--resume-report", "data/batch-run-report.json"])
+    result = subprocess.run(command, cwd=ROOT, check=False)
     return result.returncode
 
 
