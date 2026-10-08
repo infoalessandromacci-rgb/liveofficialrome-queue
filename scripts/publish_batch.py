@@ -18,6 +18,7 @@ import urllib.error
 import urllib.request
 import uuid
 from zoneinfo import ZoneInfo
+from urllib.parse import quote
 
 from validate_batch import (
     CATEGORIES, ROOT, load, normalize, select_candidates, urlkey, words,
@@ -242,6 +243,20 @@ def process(path, event, retries, poll_seconds):
         record = (status.get("processed") or {}).get(queued)
         if record and record.get("status") in ("published", "duplicate", "failed"):
             break
+        # The importer can exhaust its attempts without adding a processed record.
+        # Only remove such a file after a definitive error and an independent WP slug check.
+        error = (status.get("errors") or {}).get(queued) or {}
+        pending = [x for x in (status.get("pending") or []) if x.get("path") == queued]
+        if (not record
+                and "Numero massimo di tentativi raggiunto" in error.get("message", "")
+                and len(pending) == 1 and pending[0].get("attempts", 0) >= 2
+                and not status.get("lock")):
+            matches = api("/wp/v2/tribe_events?slug=" + quote(event["slug"]) + "&status=publish")
+            if not isinstance(matches, list) or matches:
+                raise UncertainImport("Failed queue may match a published WordPress slug; preserve it.")
+            finish(path, queued, "rejected")
+            return {"status": "failed", "candidate": path.name,
+                    "reason": "WordPress importer exhausted maximum attempts"}
         if attempt + 1 < retries:
             time.sleep(poll_seconds)
     if not record or record.get("status") not in ("published", "duplicate", "failed"):
@@ -324,7 +339,8 @@ def main():
             else:
                 report["connection"] = preflight()
                 git("pull", "--ff-only", "origin", "main")
-                for category, pool in pools.items():
+                for category in (169, 268, 271, 270, 269):
+                    pool = pools[category]
                     if CATEGORIES[category] in report["published"]:
                         continue
                     completed = False
