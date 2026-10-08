@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "generated_on": "2026-10-08",
   "source": "Live Official Rome WordPress — published tribe_events",
-  "total_active_or_future_events": 115,
+  "total_active_or_future_events": 116,
   "purpose": "Fast pre-filter anti-duplicate. Read this BEFORE researching/writing a new event.",
   "match_order": [
     "1. Exact normalized Event URL -> discard immediately",
@@ -2532,6 +2532,34 @@
         "day_venue": "2026-10-17|orion live club",
         "focus_day": "irina rimes roma 2026|2026-10-17",
         "url": "orionliveclub.com/js_events/irina-rimes"
+      }
+    },
+    {
+      "post_id": 5752,
+      "title": "Ottobrata romana a Palazzo Massimo: apertura straordinaria serale del 17 ottobre",
+      "slug": "ottobrata-romana-palazzo-massimo-apertura-serale-17-ottobre-2026",
+      "start": "2026-10-17 19:00:00",
+      "end": "2026-10-17 22:30:00",
+      "start_day": "2026-10-17",
+      "start_time": "19:00:00",
+      "venue_id": null,
+      "venue": "Museo Nazionale Romano - Palazzo Massimo alle Terme",
+      "category_ids": [
+        270
+      ],
+      "event_url": "https://www.turismoroma.it/it/eventi/ottobrata-romana-palazzo-massimo",
+      "focus_keyphrase": "Ottobrata romana Palazzo Massimo 17 ottobre 2026",
+      "normalized": {
+        "title": "ottobrata romana a palazzo massimo apertura straordinaria serale del 17 ottobre",
+        "focus": "ottobrata romana palazzo massimo 17 ottobre 2026",
+        "venue": "museo nazionale romano palazzo massimo alle terme",
+        "event_url": "turismoroma.it/it/eventi/ottobrata-romana-palazzo-massimo"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-17 19:00:00|museo nazionale romano palazzo massimo alle terme",
+        "day_venue": "2026-10-17|museo nazionale romano palazzo massimo alle terme",
+        "focus_day": "ottobrata romana palazzo massimo 17 ottobre 2026|2026-10-17",
+        "url": "turismoroma.it/it/eventi/ottobrata-romana-palazzo-massimo"
       }
     },
     {
