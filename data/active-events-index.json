@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "generated_on": "2026-10-08",
   "source": "Live Official Rome WordPress — published tribe_events",
-  "total_active_or_future_events": 112,
+  "total_active_or_future_events": 113,
   "purpose": "Fast pre-filter anti-duplicate. Read this BEFORE researching/writing a new event.",
   "match_order": [
     "1. Exact normalized Event URL -> discard immediately",
@@ -2000,6 +2000,34 @@
         "day_venue": "2026-10-15|teatro argentina",
         "focus_day": "faust fatto non detto roma|2026-10-15",
         "url": "teatrodiroma.net/spettacoli/il-teatro-e-vita-la-stagione-2026-2027-del-teatro-di-roma/teatro-argentina/faust-fatto-non-detto"
+      }
+    },
+    {
+      "post_id": 5743,
+      "title": "Pazzo ad Arte: l'Amleto di Giuseppe Pestillo al Teatro Torlonia",
+      "slug": "pazzo-ad-arte-giuseppe-pestillo-teatro-torlonia-15-ottobre-2026",
+      "start": "2026-10-15 20:00:00",
+      "end": "2026-10-15 21:00:00",
+      "start_day": "2026-10-15",
+      "start_time": "20:00:00",
+      "venue_id": null,
+      "venue": "Teatro di Villa Torlonia",
+      "category_ids": [
+        268
+      ],
+      "event_url": "https://www.teatrodiroma.net/spettacoli/il-teatro-e-vita-la-stagione-2026-2027-del-teatro-di-roma/teatro-torlonia/pazzo-ad-arte-stagione-2026-2027-teatro-torlonia/",
+      "focus_keyphrase": "Pazzo ad Arte Teatro Torlonia 2026",
+      "normalized": {
+        "title": "pazzo ad arte l amleto di giuseppe pestillo al teatro torlonia",
+        "focus": "pazzo ad arte teatro torlonia 2026",
+        "venue": "teatro di villa torlonia",
+        "event_url": "teatrodiroma.net/spettacoli/il-teatro-e-vita-la-stagione-2026-2027-del-teatro-di-roma/teatro-torlonia/pazzo-ad-arte-stagione-2026-2027-teatro-torlonia"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-15 20:00:00|teatro di villa torlonia",
+        "day_venue": "2026-10-15|teatro di villa torlonia",
+        "focus_day": "pazzo ad arte teatro torlonia 2026|2026-10-15",
+        "url": "teatrodiroma.net/spettacoli/il-teatro-e-vita-la-stagione-2026-2027-del-teatro-di-roma/teatro-torlonia/pazzo-ad-arte-stagione-2026-2027-teatro-torlonia"
       }
     },
     {
