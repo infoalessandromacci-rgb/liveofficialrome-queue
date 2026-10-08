@@ -55,6 +55,27 @@ jobs:
               *) echo "Invalid mode"; exit 2 ;;
             esac
           fi
+      - name: Persist batch report in GitHub
+        if: always()
+        env:
+          RUN_ID: ${{ github.run_id }}
+          TRIGGER: ${{ github.event_name }}
+        run: |
+          if [ -f reports/latest-batch.json ]; then
+            python - <<'PY'
+          import json, os, pathlib
+          obj = json.loads(pathlib.Path("reports/latest-batch.json").read_text(encoding="utf-8"))
+          obj["github_run_id"] = os.environ["RUN_ID"]
+          obj["github_trigger"] = os.environ["TRIGGER"]
+          target = pathlib.Path("data/batch-run-report.json")
+          target.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          PY
+            git add data/batch-run-report.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Record auditable batch run outcome"
+              git push origin HEAD:main || (git pull --rebase origin main && git push origin HEAD:main)
+            fi
+          fi
       - name: Upload audit report
         if: always()
         uses: actions/upload-artifact@v4
