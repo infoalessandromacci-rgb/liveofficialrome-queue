@@ -1,5 +1,9 @@
 name: Publish verified 5-category batch
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'control/publish-request.json'
   workflow_dispatch:
     inputs:
       mode:
@@ -41,12 +45,16 @@ jobs:
           WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
           MODE: ${{ inputs.mode }}
         run: |
-          case "$MODE" in
-            preflight) python scripts/publish_batch.py --preflight ;;
-            dry-run)   python scripts/publish_batch.py ;;
-            publish)   python scripts/publish_batch.py --apply ;;
-            *) echo "Invalid mode"; exit 2 ;;
-          esac
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            python scripts/authorized_publish.py
+          else
+            case "$MODE" in
+              preflight) python scripts/publish_batch.py --preflight ;;
+              dry-run)   python scripts/publish_batch.py ;;
+              publish)   python scripts/publish_batch.py --apply ;;
+              *) echo "Invalid mode"; exit 2 ;;
+            esac
+          fi
       - name: Upload audit report
         if: always()
         uses: actions/upload-artifact@v4
