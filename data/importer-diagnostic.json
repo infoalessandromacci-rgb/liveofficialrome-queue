@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-08T18:56:35.912846+00:00",
+  "checked_at": "2026-10-08T19:04:13.628468+00:00",
   "last_run": {
-    "time": "2026-10-08 18:55:20",
+    "time": "2026-10-08 19:03:05",
     "counts": {
       "published": 0,
       "duplicate": 0,
@@ -12,10 +12,10 @@
     "error_count": 1
   },
   "errors": {
-    "queue/batch-5c31a10e07a1-2026-10-08-controller-03-satyrus-sunglass-16-ottobre.json": {
+    "queue/batch-46a4bbdef480-2026-10-08-controller-03-nubes-able-noise-17-ottobre.json": {
       "message": "Numero massimo di tentativi raggiunto.",
-      "time": "2026-10-08 18:55:20",
-      "sha": "2ea55b147f7cf0aabc65ade5905f785f329d3b5e",
+      "time": "2026-10-08 19:03:05",
+      "sha": "3de3136aa523939c6e065925557877d2ef527bdc",
       "attempts": 2
     }
   },
@@ -40,13 +40,14 @@
     "queue/2026-10-05-1600-sunglass-closing-party-16-ottobre-2026.json": 2,
     "queue/2026-10-08-test-http-sha.json@0f0d5e1072afc54eaa94671fbf981f0f4995911e": 2,
     "queue/2026-10-08-test-sha-v121.json@bcf0d475bc62066d3f613bf926bac63b020c064b": 2,
-    "queue/batch-5c31a10e07a1-2026-10-08-controller-03-satyrus-sunglass-16-ottobre.json@2ea55b147f7cf0aabc65ade5905f785f329d3b5e": 2
+    "queue/batch-5c31a10e07a1-2026-10-08-controller-03-satyrus-sunglass-16-ottobre.json@2ea55b147f7cf0aabc65ade5905f785f329d3b5e": 2,
+    "queue/batch-46a4bbdef480-2026-10-08-controller-03-nubes-able-noise-17-ottobre.json@3de3136aa523939c6e065925557877d2ef527bdc": 2
   },
   "pending_count": 1,
   "pending": [
     {
-      "path": "queue/batch-5c31a10e07a1-2026-10-08-controller-03-satyrus-sunglass-16-ottobre.json",
-      "sha": "2ea55b147f7cf0aabc65ade5905f785f329d3b5e",
+      "path": "queue/batch-46a4bbdef480-2026-10-08-controller-03-nubes-able-noise-17-ottobre.json",
+      "sha": "3de3136aa523939c6e065925557877d2ef527bdc",
       "attempts": 2
     }
   ],
