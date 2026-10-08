@@ -8,7 +8,7 @@ on:
       - ".github/workflows/controller-ci.yml"
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 concurrency:
   group: liveofficialrome-controller-safety
   cancel-in-progress: true
@@ -18,23 +18,64 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Compile controller scripts
+      - id: compile
+        name: Compile controller scripts
         run: python -m compileall -q scripts tests
-      - name: Offline unit tests
+      - id: unit
+        name: Offline unit tests
         run: python -m unittest discover -s tests -p "test_*.py" -v
-      - name: Authenticate WordPress without publishing
+      - id: wordpress
+        name: Authenticate WordPress without publishing
         env:
           WP_APP_USER: ${{ secrets.WP_APP_USER }}
           WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
           WP_IMPORTER_TOKEN: ${{ secrets.WP_IMPORTER_TOKEN }}
         run: python scripts/publish_batch.py --preflight
-      - name: Save audit result
+      - name: Save auditable safety status in GitHub
+        if: always()
+        env:
+          COMPILE: ${{ steps.compile.outcome }}
+          UNIT: ${{ steps.unit.outcome }}
+          WORDPRESS: ${{ steps.wordpress.outcome }}
+          START_COMMIT: ${{ github.sha }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import datetime, json, os, pathlib
+          steps = {name: os.environ.get(env, "unknown")
+                   for name, env in (("compile", "COMPILE"), ("unit_tests", "UNIT"), ("wordpress_preflight", "WORDPRESS"))}
+          obj = {
+              "checked_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              "run_id": os.environ.get("RUN_ID"),
+              "checked_commit": os.environ.get("START_COMMIT"),
+              "steps": steps,
+              "healthy": all(value == "success" for value in steps.values()),
+              "publishing_performed": False,
+          }
+          target = pathlib.Path("data/controller-health.json")
+          target.parent.mkdir(exist_ok=True)
+          target.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print(json.dumps(obj, ensure_ascii=False, indent=2))
+          PY
+          git config user.name "live-rome-safety[bot]"
+          git config user.email "live-rome-safety@users.noreply.github.com"
+          git add data/controller-health.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record controller safety checks (no publishing)"
+            git push origin HEAD:main
+          fi
+      - name: Save audit artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: live-rome-controller-safety
-          path: reports/latest-batch.json
+          path: |
+            reports/latest-batch.json
+            data/controller-health.json
           if-no-files-found: warn
