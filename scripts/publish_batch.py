@@ -53,7 +53,13 @@ def api(path, method="GET", payload=None):
         with urllib.request.urlopen(req, timeout=45) as response:
             return json.load(response)
     except urllib.error.HTTPError as exc:
-        raise BatchFailure("WordPress API returned HTTP " + str(exc.code) + " for " + path) from exc
+        try:
+            error = json.loads(exc.read().decode("utf-8", errors="replace"))
+            error_code = str(error.get("code", "unknown"))[:90]
+        except (ValueError, AttributeError, OSError):
+            error_code = "unknown"
+        raise BatchFailure("WordPress API returned HTTP " + str(exc.code)
+                           + " (" + error_code + ") for " + path) from exc
     except (urllib.error.URLError, TimeoutError) as exc:
         raise BatchFailure("WordPress API unavailable for " + path) from exc
 
@@ -259,6 +265,9 @@ def main():
     args = parser.parse_args()
     report = {"mode": "publish" if args.apply else "preflight" if args.preflight else "dry-run",
               "status": "NOT_READY", "published": {}, "rejected": [], "failures": {},
+              "auth_config": {"app_user_present": bool(os.environ.get("WP_APP_USER")),
+                              "app_password_present": bool(os.environ.get("WP_APP_PASSWORD")),
+                              "bearer_present": bool(os.environ.get("WP_IMPORTER_TOKEN"))},
               "generated_at": dt.datetime.now(dt.timezone.utc).isoformat()}
     result_code = 0
     try:
