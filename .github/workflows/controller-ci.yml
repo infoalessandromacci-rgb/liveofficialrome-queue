@@ -1,4 +1,5 @@
 name: Controller safety checks (no publishing)
+# Recheck WordPress application credentials after GitHub Secrets update
 on:
   push:
     branches: [main]
