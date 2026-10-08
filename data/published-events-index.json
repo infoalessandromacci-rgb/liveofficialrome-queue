@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "generated_on": "2026-10-08",
   "source": "Live Official Rome WordPress — published tribe_events",
-  "total_events": 263,
-  "active_or_future_events": 104,
+  "total_events": 261,
+  "active_or_future_events": 102,
   "purpose": "Pre-filter anti-duplicate before researching, writing or queueing new events.",
   "match_policy": {
     "hard_duplicate": [
@@ -150,21 +150,6 @@
           "post_id": 5582,
           "title": "I Babyshambles tornano a Roma per una notte di rock britannico all’Orion Live Club",
           "slug": "babyshambles-roma-orion-live-club-7-ottobre-2026"
-        }
-      ]
-    },
-    {
-      "key": "2026-10-23 10:00:00|gazometro ostiense",
-      "posts": [
-        {
-          "post_id": 5632,
-          "title": "Maker Faire Rome torna al Gazometro con tre giorni dedicati a innovazione tecnologia e creatività",
-          "slug": "maker-faire-rome-2026-gazometro"
-        },
-        {
-          "post_id": 5664,
-          "title": "Maker Faire Rome 2026 trasforma il Gazometro in capitale dell’innovazione",
-          "slug": "maker-faire-rome-2026"
         }
       ]
     }
@@ -1683,34 +1668,6 @@
       }
     },
     {
-      "post_id": 5635,
-      "title": "Elektro Stage con Venerus accende il Tevere Art Gallery",
-      "slug": "elektro-stage-venerus-tevere-art-gallery-roma-2026",
-      "start": "2026-10-10 18:00:00",
-      "end": "2026-10-11 06:00:00",
-      "start_day": "2026-10-10",
-      "start_time": "18:00:00",
-      "venue_id": 5634,
-      "venue": "Tevere Art Gallery",
-      "category_ids": [
-        269
-      ],
-      "event_url": "https://biennalemartelive.it/altrntv-music/",
-      "focus_keyphrase": "Elektro Stage Venerus Roma 10 ottobre 2026",
-      "normalized": {
-        "title": "elektro stage con venerus accende il tevere art gallery",
-        "focus": "elektro stage venerus roma 10 ottobre 2026",
-        "venue": "tevere art gallery",
-        "event_url": "biennalemartelive.it/altrntv-music"
-      },
-      "duplicate_keys": {
-        "datetime_venue": "2026-10-10 18:00:00|tevere art gallery",
-        "day_venue": "2026-10-10|tevere art gallery",
-        "focus_day": "elektro stage venerus roma 10 ottobre 2026|2026-10-10",
-        "url": "biennalemartelive.it/altrntv-music"
-      }
-    },
-    {
       "post_id": 5666,
       "title": "Quasi inaugura la stagione all’Orion con il party più colorato d’Italia",
       "slug": "quasi-orion-roma-2026",
@@ -2716,34 +2673,6 @@
         "day_venue": "2026-10-23|gazometro ostiense",
         "focus_day": "maker faire rome 2026|2026-10-23",
         "url": "turismoroma.it/it/eventi/maker-faire-rome-2026"
-      }
-    },
-    {
-      "post_id": 5664,
-      "title": "Maker Faire Rome 2026 trasforma il Gazometro in capitale dell’innovazione",
-      "slug": "maker-faire-rome-2026",
-      "start": "2026-10-23 10:00:00",
-      "end": "2026-10-25 19:00:00",
-      "start_day": "2026-10-23",
-      "start_time": "10:00:00",
-      "venue_id": 5631,
-      "venue": "Gazometro Ostiense",
-      "category_ids": [
-        270
-      ],
-      "event_url": "https://www.turismoroma.it/en/events/maker-faire-rome-2026",
-      "focus_keyphrase": "Maker Faire Rome 2026",
-      "normalized": {
-        "title": "maker faire rome 2026 trasforma il gazometro in capitale dell innovazione",
-        "focus": "maker faire rome 2026",
-        "venue": "gazometro ostiense",
-        "event_url": "turismoroma.it/en/events/maker-faire-rome-2026"
-      },
-      "duplicate_keys": {
-        "datetime_venue": "2026-10-23 10:00:00|gazometro ostiense",
-        "day_venue": "2026-10-23|gazometro ostiense",
-        "focus_day": "maker faire rome 2026|2026-10-23",
-        "url": "turismoroma.it/en/events/maker-faire-rome-2026"
       }
     },
     {
@@ -9028,34 +8957,6 @@
       }
     },
     {
-      "post_id": 5635,
-      "title": "Elektro Stage con Venerus accende il Tevere Art Gallery",
-      "slug": "elektro-stage-venerus-tevere-art-gallery-roma-2026",
-      "start": "2026-10-10 18:00:00",
-      "end": "2026-10-11 06:00:00",
-      "start_day": "2026-10-10",
-      "start_time": "18:00:00",
-      "venue_id": 5634,
-      "venue": "Tevere Art Gallery",
-      "category_ids": [
-        269
-      ],
-      "event_url": "https://biennalemartelive.it/altrntv-music/",
-      "focus_keyphrase": "Elektro Stage Venerus Roma 10 ottobre 2026",
-      "normalized": {
-        "title": "elektro stage con venerus accende il tevere art gallery",
-        "focus": "elektro stage venerus roma 10 ottobre 2026",
-        "venue": "tevere art gallery",
-        "event_url": "biennalemartelive.it/altrntv-music"
-      },
-      "duplicate_keys": {
-        "datetime_venue": "2026-10-10 18:00:00|tevere art gallery",
-        "day_venue": "2026-10-10|tevere art gallery",
-        "focus_day": "elektro stage venerus roma 10 ottobre 2026|2026-10-10",
-        "url": "biennalemartelive.it/altrntv-music"
-      }
-    },
-    {
       "post_id": 5666,
       "title": "Quasi inaugura la stagione all’Orion con il party più colorato d’Italia",
       "slug": "quasi-orion-roma-2026",
@@ -10061,34 +9962,6 @@
         "day_venue": "2026-10-23|gazometro ostiense",
         "focus_day": "maker faire rome 2026|2026-10-23",
         "url": "turismoroma.it/it/eventi/maker-faire-rome-2026"
-      }
-    },
-    {
-      "post_id": 5664,
-      "title": "Maker Faire Rome 2026 trasforma il Gazometro in capitale dell’innovazione",
-      "slug": "maker-faire-rome-2026",
-      "start": "2026-10-23 10:00:00",
-      "end": "2026-10-25 19:00:00",
-      "start_day": "2026-10-23",
-      "start_time": "10:00:00",
-      "venue_id": 5631,
-      "venue": "Gazometro Ostiense",
-      "category_ids": [
-        270
-      ],
-      "event_url": "https://www.turismoroma.it/en/events/maker-faire-rome-2026",
-      "focus_keyphrase": "Maker Faire Rome 2026",
-      "normalized": {
-        "title": "maker faire rome 2026 trasforma il gazometro in capitale dell innovazione",
-        "focus": "maker faire rome 2026",
-        "venue": "gazometro ostiense",
-        "event_url": "turismoroma.it/en/events/maker-faire-rome-2026"
-      },
-      "duplicate_keys": {
-        "datetime_venue": "2026-10-23 10:00:00|gazometro ostiense",
-        "day_venue": "2026-10-23|gazometro ostiense",
-        "focus_day": "maker faire rome 2026|2026-10-23",
-        "url": "turismoroma.it/en/events/maker-faire-rome-2026"
       }
     },
     {
