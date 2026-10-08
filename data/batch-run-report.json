@@ -1,6 +1,6 @@
 {
   "mode": "publish",
-  "status": "HALTED",
+  "status": "PARTIAL",
   "published": {
     "Concerti e Live": {
       "status": "published",
@@ -21,19 +21,40 @@
       "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/00_Pazzo-Ad-Arte_.png",
       "words": 1148,
       "seo_verified": true
+    },
+    "Musei e Mostre": {
+      "status": "published",
+      "candidate": "2026-10-08-controller-04-outlaws-istituto-svizzero-16-ottobre.json",
+      "post_id": 5746,
+      "url": "https://www.liveofficialrome.it/event/outlaws-istituto-svizzero-mostra-roma-16-ottobre-2026/",
+      "category": "Musei e Mostre",
+      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/IS-VINCI_OUTLAWS-Instagram-03-scaled-1.jpg",
+      "words": 1131,
+      "seo_verified": true
+    },
+    "Disco e Club": {
+      "status": "published",
+      "candidate": "2026-10-08-controller-03-giorgia-angiuli-soap-house-16-ottobre.json",
+      "post_id": 5749,
+      "url": "https://www.liveofficialrome.it/event/giorgia-angiuli-live-soap-house-opening-season-roma-16-ottobre-2026/",
+      "category": "Disco e Club",
+      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/portada-Giorgia-Angiuli.webp",
+      "words": 1102,
+      "seo_verified": true
     }
   },
   "rejected": [],
   "failures": {
-    "controller": "Importer outcome is unknown; keep queue item; do not replace."
+    "2026-10-08-controller-05-mit-contemporaneo-17-ottobre.json": "failed",
+    "Eventi e Manifestazioni": "No confirmed publication"
   },
   "auth_config": {
     "app_user_present": true,
     "app_password_present": true,
     "bearer_present": false
   },
-  "generated_at": "2026-10-08T19:02:28.990313+00:00",
-  "resumed_from_run_id": "37827847195",
+  "generated_at": "2026-10-08T19:08:35.288201+00:00",
+  "resumed_from_run_id": "37828920433",
   "week_start": "2026-10-12",
   "week_end": "2026-10-18",
   "available": {
@@ -48,6 +69,7 @@
     "importer_version": "1.2.1",
     "pending_count": 0
   },
-  "github_run_id": "37828920433",
+  "count": 4,
+  "github_run_id": "37829692557",
   "github_trigger": "push"
 }
