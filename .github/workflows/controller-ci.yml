@@ -1,0 +1,40 @@
+name: Controller safety checks (no publishing)
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - ".github/workflows/controller-ci.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: liveofficialrome-controller-safety
+  cancel-in-progress: true
+jobs:
+  safety:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile controller scripts
+        run: python -m compileall -q scripts tests
+      - name: Offline unit tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v
+      - name: Authenticate WordPress without publishing
+        env:
+          WP_APP_USER: ${{ secrets.WP_APP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+          WP_IMPORTER_TOKEN: ${{ secrets.WP_IMPORTER_TOKEN }}
+        run: python scripts/publish_batch.py --preflight
+      - name: Save audit result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-rome-controller-safety
+          path: reports/latest-batch.json
+          if-no-files-found: warn
