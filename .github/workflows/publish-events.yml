@@ -2,11 +2,15 @@ name: Publish verified 5-category batch
 on:
   workflow_dispatch:
     inputs:
-      apply:
-        description: 'Actually queue and import validated candidates'
+      mode:
+        description: "Preflight tests WordPress access; dry-run validates candidates; publish writes live events"
+        type: choice
         required: true
-        type: boolean
-        default: false
+        default: preflight
+        options:
+          - preflight
+          - dry-run
+          - publish
 permissions:
   contents: write
 concurrency:
@@ -19,22 +23,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           persist-credentials: true
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-      - name: Set Git identity
+          python-version: "3.12"
+      - name: Unit tests (no WordPress writes)
+        run: python -m unittest discover -s tests -p "test_*.py" -v
+      - name: Git author for verified event commits
         run: |
           git config user.name "live-rome-controller[bot]"
           git config user.email "live-rome-controller@users.noreply.github.com"
-      - name: Validate and publish
+      - name: Run batch controller
         env:
           WP_IMPORTER_TOKEN: ${{ secrets.WP_IMPORTER_TOKEN }}
           WP_APP_USER: ${{ secrets.WP_APP_USER }}
           WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+          MODE: ${{ inputs.mode }}
         run: |
-          if [ "${{ inputs.apply }}" = "true" ]; then
-            python scripts/publish_batch.py --apply
-          else
-            python scripts/publish_batch.py
-          fi
+          case "$MODE" in
+            preflight) python scripts/publish_batch.py --preflight ;;
+            dry-run)   python scripts/publish_batch.py ;;
+            publish)   python scripts/publish_batch.py --apply ;;
+            *) echo "Invalid mode"; exit 2 ;;
+          esac
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-rome-batch-audit
+          path: reports/latest-batch.json
+          if-no-files-found: warn
