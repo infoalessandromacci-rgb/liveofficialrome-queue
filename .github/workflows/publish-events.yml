@@ -1,0 +1,38 @@
+name: Publish verified 5-category batch
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Actually queue and import validated candidates'
+        required: true
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: liveofficialrome-importer
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Set Git identity
+        run: |
+          git config user.name "live-rome-controller[bot]"
+          git config user.email "live-rome-controller@users.noreply.github.com"
+      - name: Validate and publish
+        env:
+          WP_IMPORTER_TOKEN: ${{ secrets.WP_IMPORTER_TOKEN }}
+        run: |
+          if [ "${{ inputs.apply }}" = "true" ]; then
+            python scripts/publish_batch.py --apply
+          else
+            python scripts/publish_batch.py
+          fi
