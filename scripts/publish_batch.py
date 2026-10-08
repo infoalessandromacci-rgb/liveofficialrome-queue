@@ -12,7 +12,10 @@ def request(route, method="GET", payload=None):
     body=json.dumps(payload).encode() if payload is not None else None
     headers={"Accept":"application/json","User-Agent":"LiveRome-BatchController/1.0"}
     token=os.environ.get("WP_IMPORTER_TOKEN","")
-    if os.environ.get("WP_APP_USER") and os.environ.get("WP_APP_PASSWORD"):\n        raw=(os.environ["WP_APP_USER"]+":"+os.environ["WP_APP_PASSWORD"]).encode()\n        headers["Authorization"]="Basic "+base64.b64encode(raw).decode()\n    elif token:headers["Authorization"]="Bearer "+token
+    if os.environ.get("WP_APP_USER") and os.environ.get("WP_APP_PASSWORD"):
+        raw=(os.environ["WP_APP_USER"]+":"+os.environ["WP_APP_PASSWORD"]).encode()
+        headers["Authorization"]="Basic "+base64.b64encode(raw).decode()
+    elif token:headers["Authorization"]="Bearer "+token
     if body:headers["Content-Type"]="application/json"
     with urllib.request.urlopen(urllib.request.Request(url,data=body,headers=headers,method=method),timeout=45) as response:
         return json.load(response)
