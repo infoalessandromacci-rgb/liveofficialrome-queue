@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "mode": "recover_definitive_failure",
+  "approved": true,
+  "created_on": "2026-10-08",
+  "queue": "queue/batch-5c31a10e07a1-2026-10-08-controller-03-satyrus-sunglass-16-ottobre.json",
+  "candidate": "candidates/2026-10-08-controller-03-satyrus-sunglass-16-ottobre.json"
+}
