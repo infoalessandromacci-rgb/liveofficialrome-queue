@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "generated_on": "2026-10-08",
   "source": "Live Official Rome WordPress — published tribe_events",
-  "total_events": 270,
-  "active_or_future_events": 113,
+  "total_events": 271,
+  "active_or_future_events": 114,
   "purpose": "Pre-filter anti-duplicate before researching, writing or queueing new events.",
   "match_policy": {
     "hard_duplicate": [
@@ -2337,6 +2337,34 @@
         "day_venue": "2026-10-16|maxxi museo nazionale delle arti del xxi secolo",
         "focus_day": "sophie calle maxxi roma|2026-10-16",
         "url": "maxxi.art/events/sophie-calle-matrimoni-rotture-e-funerali-inclusi"
+      }
+    },
+    {
+      "post_id": 5746,
+      "title": "Outlaws all'Istituto Svizzero: arte e legge nella mostra collettiva a Roma",
+      "slug": "outlaws-istituto-svizzero-mostra-roma-16-ottobre-2026",
+      "start": "2026-10-16 14:30:00",
+      "end": "2027-02-07 18:30:00",
+      "start_day": "2026-10-16",
+      "start_time": "14:30:00",
+      "venue_id": null,
+      "venue": "Istituto Svizzero di Roma",
+      "category_ids": [
+        271
+      ],
+      "event_url": "https://www.istitutosvizzero.it/it/mostra-collettiva/outlaws/",
+      "focus_keyphrase": "Outlaws Istituto Svizzero Roma 2026",
+      "normalized": {
+        "title": "outlaws all istituto svizzero arte e legge nella mostra collettiva a roma",
+        "focus": "outlaws istituto svizzero roma 2026",
+        "venue": "istituto svizzero di roma",
+        "event_url": "istitutosvizzero.it/it/mostra-collettiva/outlaws"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-16 14:30:00|istituto svizzero di roma",
+        "day_venue": "2026-10-16|istituto svizzero di roma",
+        "focus_day": "outlaws istituto svizzero roma 2026|2026-10-16",
+        "url": "istitutosvizzero.it/it/mostra-collettiva/outlaws"
       }
     },
     {
@@ -9906,6 +9934,34 @@
         "day_venue": "2026-10-16|maxxi museo nazionale delle arti del xxi secolo",
         "focus_day": "sophie calle maxxi roma|2026-10-16",
         "url": "maxxi.art/events/sophie-calle-matrimoni-rotture-e-funerali-inclusi"
+      }
+    },
+    {
+      "post_id": 5746,
+      "title": "Outlaws all'Istituto Svizzero: arte e legge nella mostra collettiva a Roma",
+      "slug": "outlaws-istituto-svizzero-mostra-roma-16-ottobre-2026",
+      "start": "2026-10-16 14:30:00",
+      "end": "2027-02-07 18:30:00",
+      "start_day": "2026-10-16",
+      "start_time": "14:30:00",
+      "venue_id": null,
+      "venue": "Istituto Svizzero di Roma",
+      "category_ids": [
+        271
+      ],
+      "event_url": "https://www.istitutosvizzero.it/it/mostra-collettiva/outlaws/",
+      "focus_keyphrase": "Outlaws Istituto Svizzero Roma 2026",
+      "normalized": {
+        "title": "outlaws all istituto svizzero arte e legge nella mostra collettiva a roma",
+        "focus": "outlaws istituto svizzero roma 2026",
+        "venue": "istituto svizzero di roma",
+        "event_url": "istitutosvizzero.it/it/mostra-collettiva/outlaws"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-16 14:30:00|istituto svizzero di roma",
+        "day_venue": "2026-10-16|istituto svizzero di roma",
+        "focus_day": "outlaws istituto svizzero roma 2026|2026-10-16",
+        "url": "istitutosvizzero.it/it/mostra-collettiva/outlaws"
       }
     },
     {
