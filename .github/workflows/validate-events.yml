@@ -1,0 +1,28 @@
+name: Validate Live Official Rome 5-category batch
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'candidates/**'
+      - 'data/active-events-index.json'
+      - 'scripts/validate_batch.py'
+      - '.github/workflows/validate-events.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidates against active events index
+        run: python scripts/validate_batch.py
+      - name: Upload validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-rome-validation
+          path: reports/validation.json
+          if-no-files-found: warn
