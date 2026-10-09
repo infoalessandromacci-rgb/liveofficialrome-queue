@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-09",
+  "week_start": "2026-10-12",
+  "week_end": "2026-10-18",
+  "events": [
+    {
+      "category_id": 169,
+      "title": "Inaugurazione del ciclo Calliope IUC",
+      "start": "2026-10-17 17:30:00",
+      "url": "https://www.concertiiuc.it/eventi/82-1/"
+    },
+    {
+      "category_id": 268,
+      "title": "L'orologio americano",
+      "start": "2026-10-14 21:00:00",
+      "url": "https://www.elfo.org/eventi/2026-2027/l-orologio-americano-tour.htm"
+    },
+    {
+      "category_id": 269,
+      "title": "LOVRA Room26",
+      "start": "2026-10-17 22:00:00",
+      "url": "https://app.tickly.it/evento/room26-pres-lovra-398"
+    },
+    {
+      "category_id": 271,
+      "title": "CASOTTO Ex Elettrofonica",
+      "start": "2026-10-16 18:00:00",
+      "url": "https://www.exelettrofonica.com/it/projects/casotto/"
+    },
+    {
+      "category_id": 270,
+      "title": "Chiara Guidi MOISAI Domus Aurea",
+      "start": "2026-10-18 17:30:00",
+      "url": "https://colosseo.it/evento/moisai-2026/"
+    }
+  ]
+}
