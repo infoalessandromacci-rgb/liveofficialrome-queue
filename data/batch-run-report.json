@@ -1,20 +1,66 @@
 {
-  "mode": "preflight",
-  "status": "CONNECTED",
-  "published": {},
+  "mode": "publish",
+  "status": "PARTIAL",
+  "published": {
+    "Teatro e Cinema": {
+      "status": "published",
+      "candidate": "2026-10-22-amelie-musical-brancaccio.json",
+      "post_id": 5756,
+      "url": "https://www.liveofficialrome.it/event/amelie-il-musical-teatro-brancaccio-roma-22-ottobre-2026/",
+      "category": "Teatro e Cinema",
+      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/amelie-1920X560.jpg",
+      "words": 1060,
+      "seo_verified": true
+    },
+    "Musei e Mostre": {
+      "status": "published",
+      "candidate": "2026-10-20-tiziano-galleria-borghese.json",
+      "post_id": 5758,
+      "url": "https://www.liveofficialrome.it/event/tiziano-dialoghi-sacro-profano-galleria-borghese-20-ottobre-2026/",
+      "category": "Musei e Mostre",
+      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/Tiziano-Web-e-Social-News-1080x1350-01.jpg",
+      "words": 1006,
+      "seo_verified": true
+    },
+    "Eventi e Manifestazioni": {
+      "status": "published",
+      "candidate": "2026-10-20-collegio-romano-napoli.json",
+      "post_id": 5761,
+      "url": "https://www.liveofficialrome.it/event/collegio-romano-napoli-viaggiatori-cinquecento-20-ottobre-2026/",
+      "category": "Eventi e Manifestazioni",
+      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/12028129.jpg",
+      "words": 1034,
+      "seo_verified": true
+    }
+  },
   "rejected": [],
-  "failures": {},
+  "failures": {
+    "2026-10-23-j-ax-atlantico.json": "failed",
+    "Concerti e Live": "No confirmed publication",
+    "2026-10-24-minu-jovonn-illuminati.json": "failed",
+    "Disco e Club": "No confirmed publication"
+  },
   "auth_config": {
     "app_user_present": true,
     "app_password_present": true,
     "bearer_present": false
   },
-  "generated_at": "2026-10-13T06:26:42.008033+00:00",
+  "generated_at": "2026-10-13T06:54:35.705610+00:00",
+  "week_start": "2026-10-19",
+  "week_end": "2026-10-25",
+  "available": {
+    "Concerti e Live": 1,
+    "Teatro e Cinema": 1,
+    "Disco e Club": 1,
+    "Musei e Mostre": 1,
+    "Eventi e Manifestazioni": 1
+  },
   "connection": {
     "user_id": 1,
     "importer_version": "1.2.1",
     "pending_count": 0
   },
-  "github_run_id": "38356715923",
-  "github_trigger": "workflow_dispatch"
+  "count": 3,
+  "github_run_id": "38359408182",
+  "github_trigger": "push"
 }
