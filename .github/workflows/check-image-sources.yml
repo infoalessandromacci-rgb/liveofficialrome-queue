@@ -1,0 +1,18 @@
+name: Test candidate image reachability
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/check_image_sources.py'
+  workflow_dispatch:
+jobs:
+  check-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check image HTTP and MIME
+        run: python scripts/check_image_sources.py
