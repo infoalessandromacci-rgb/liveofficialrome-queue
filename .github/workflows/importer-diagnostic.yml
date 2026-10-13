@@ -46,7 +46,7 @@ jobs:
             "lock": status.get("lock"),
             "last_run_mode": status.get("last_run_mode"),
             "processed_batch": {k:v for k,v in status.get("processed",{}).items()
-                                if "2026-10-08-controller-" in k},
+                                if "2026-10-23-j-ax" in k or "2026-10-24-minu-jovonn" in k},
           }
           target = pathlib.Path("data/importer-diagnostic.json")
           target.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
