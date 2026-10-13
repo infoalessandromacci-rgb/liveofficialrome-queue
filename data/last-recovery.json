@@ -1,8 +1,8 @@
 {
   "status": "RECOVERED",
-  "failed_slug": "nubes-able-noise-esc-atelier-roma-17-ottobre-2026",
-  "old_queue": "queue/batch-46a4bbdef480-2026-10-08-controller-03-nubes-able-noise-17-ottobre.json",
+  "failed_slug": "j-ax-vita-morte-miracoli-tour-roma-23-ottobre-2026",
+  "old_queue": "queue/batch-a1d0cc79e6b7-2026-10-23-j-ax-atlantico.json",
   "reason": "Numero massimo di tentativi raggiunto.",
   "discarded_post": false,
-  "recovery_time": "2026-10-08T19:06:27.497173+00:00"
+  "recovery_time": "2026-10-13T07:09:41.507150+00:00"
 }
