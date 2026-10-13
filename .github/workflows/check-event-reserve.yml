@@ -1,5 +1,9 @@
 name: Prepare and validate event reserve
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'control/next-batch-window.json'
   workflow_dispatch:
   schedule:
     - cron: '30 6,9,12,16 * * *'
