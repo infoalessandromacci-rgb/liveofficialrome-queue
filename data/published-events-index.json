@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "generated_on": "2026-10-13",
   "source": "Live Official Rome WordPress — published tribe_events",
-  "total_events": 275,
-  "active_or_future_events": 87,
+  "total_events": 276,
+  "active_or_future_events": 88,
   "purpose": "Pre-filter anti-duplicate before researching, writing or queueing new events.",
   "match_policy": {
     "hard_duplicate": [
@@ -2169,6 +2169,34 @@
         "day_venue": "2026-10-20|galleria borghese",
         "focus_day": "mostra tiziano roma 2026|2026-10-20",
         "url": "galleriaborghese.cultura.gov.it/en/titian-dialogues-between-the-sacred-and-the-profane-galleria-borghese-meets-the-annunciation-from-treviso-cathedral"
+      }
+    },
+    {
+      "post_id": 5761,
+      "title": "Il Collegio Romano racconta Napoli e i viaggiatori del Cinquecento con Antonio Denunzio",
+      "slug": "collegio-romano-napoli-viaggiatori-cinquecento-20-ottobre-2026",
+      "start": "2026-10-20 18:00:00",
+      "end": "2026-10-20 19:30:00",
+      "start_day": "2026-10-20",
+      "start_time": "18:00:00",
+      "venue_id": null,
+      "venue": "Bibliotheca Maior Sala della Crociera",
+      "category_ids": [
+        270
+      ],
+      "event_url": "https://vive.cultura.gov.it/it/viaggio-napoli-giardino-del-mondo-forestieri-citta-e-le-descriptio-urbis-al-volgere-del-cinquecento",
+      "focus_keyphrase": "Collegio Romano 20 ottobre 2026",
+      "normalized": {
+        "title": "il collegio romano racconta napoli e i viaggiatori del cinquecento con antonio denunzio",
+        "focus": "collegio romano 20 ottobre 2026",
+        "venue": "bibliotheca maior sala della crociera",
+        "event_url": "vive.cultura.gov.it/it/viaggio-napoli-giardino-del-mondo-forestieri-citta-e-le-descriptio-urbis-al-volgere-del-cinquecento"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-20 18:00:00|bibliotheca maior sala della crociera",
+        "day_venue": "2026-10-20|bibliotheca maior sala della crociera",
+        "focus_day": "collegio romano 20 ottobre 2026|2026-10-20",
+        "url": "vive.cultura.gov.it/it/viaggio-napoli-giardino-del-mondo-forestieri-citta-e-le-descriptio-urbis-al-volgere-del-cinquecento"
       }
     },
     {
@@ -9850,6 +9878,34 @@
         "day_venue": "2026-10-20|galleria borghese",
         "focus_day": "mostra tiziano roma 2026|2026-10-20",
         "url": "galleriaborghese.cultura.gov.it/en/titian-dialogues-between-the-sacred-and-the-profane-galleria-borghese-meets-the-annunciation-from-treviso-cathedral"
+      }
+    },
+    {
+      "post_id": 5761,
+      "title": "Il Collegio Romano racconta Napoli e i viaggiatori del Cinquecento con Antonio Denunzio",
+      "slug": "collegio-romano-napoli-viaggiatori-cinquecento-20-ottobre-2026",
+      "start": "2026-10-20 18:00:00",
+      "end": "2026-10-20 19:30:00",
+      "start_day": "2026-10-20",
+      "start_time": "18:00:00",
+      "venue_id": null,
+      "venue": "Bibliotheca Maior Sala della Crociera",
+      "category_ids": [
+        270
+      ],
+      "event_url": "https://vive.cultura.gov.it/it/viaggio-napoli-giardino-del-mondo-forestieri-citta-e-le-descriptio-urbis-al-volgere-del-cinquecento",
+      "focus_keyphrase": "Collegio Romano 20 ottobre 2026",
+      "normalized": {
+        "title": "il collegio romano racconta napoli e i viaggiatori del cinquecento con antonio denunzio",
+        "focus": "collegio romano 20 ottobre 2026",
+        "venue": "bibliotheca maior sala della crociera",
+        "event_url": "vive.cultura.gov.it/it/viaggio-napoli-giardino-del-mondo-forestieri-citta-e-le-descriptio-urbis-al-volgere-del-cinquecento"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-20 18:00:00|bibliotheca maior sala della crociera",
+        "day_venue": "2026-10-20|bibliotheca maior sala della crociera",
+        "focus_day": "collegio romano 20 ottobre 2026|2026-10-20",
+        "url": "vive.cultura.gov.it/it/viaggio-napoli-giardino-del-mondo-forestieri-citta-e-le-descriptio-urbis-al-volgere-del-cinquecento"
       }
     },
     {
