@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-10-13",
+  "week_start": "2026-10-19",
+  "week_end": "2026-10-25",
+  "publication_authorized": false,
+  "notice": "Research shortlist only. NOT validated publishable candidates. Do not copy directly to queue; validate original event page, image, venue, timestamps and write 800+ words first.",
+  "items": [
+    {
+      "category_id": 169,
+      "category": "Concerti e Live",
+      "name": "J-Ax Vita Morte Miracoli Tour",
+      "start_date": "2026-10-23",
+      "start_time": "21:00",
+      "venue": "Atlantico",
+      "importance_level": "A",
+      "sources": [
+        "https://www.j-ax.it/",
+        "https://www.ticketone.it/event/j-ax-atlantico-21463122/"
+      ],
+      "status": "SOURCE_CONFIRMED_IMAGE_AND_ARTICLE_PENDING"
+    },
+    {
+      "category_id": 268,
+      "category": "Teatro e Cinema",
+      "name": "Amélie il Musical",
+      "start_date": "2026-10-22",
+      "start_time": "21:00",
+      "venue": "Teatro Brancaccio",
+      "importance_level": "A",
+      "sources": [
+        "https://teatrobrancaccio.it/",
+        "https://linktr.ee/amelieilmusical"
+      ],
+      "status": "SOURCE_CONFIRMED_IMAGE_AND_ARTICLE_PENDING"
+    },
+    {
+      "category_id": 269,
+      "category": "Disco e Club",
+      "name": "Mama Scary DJ Session",
+      "start_date": "2026-10-24",
+      "start_time": "20:30",
+      "venue": "Mama Shelter Roma",
+      "importance_level": "C",
+      "sources": [
+        "https://it.mamashelter.com/roma/calendario/"
+      ],
+      "status": "SOURCE_CONFIRMED_IMAGE_AND_ARTICLE_PENDING"
+    },
+    {
+      "category_id": 271,
+      "category": "Musei e Mostre",
+      "name": "Tiziano Dialoghi tra Sacro e Profano",
+      "start_date": "2026-10-20",
+      "start_time": "09:00",
+      "venue": "Galleria Borghese",
+      "importance_level": "A",
+      "sources": [
+        "https://www.arte.it/calendario-arte/roma/mostra-tiziano-dialoghi-tra-sacro-e-profano-104586"
+      ],
+      "status": "SECONDARY_SOURCE_CONFIRMED_OFFICIAL_EVENT_PAGE_AND_IMAGE_PENDING"
+    },
+    {
+      "category_id": 270,
+      "category": "Eventi e Manifestazioni",
+      "name": "Incontriamoci al Collegio Romano: In viaggio a Napoli",
+      "start_date": "2026-10-20",
+      "start_time": null,
+      "venue": "Bibliotheca Maior Collegio Romano",
+      "importance_level": "B",
+      "sources": [
+        "https://vive.cultura.gov.it/it/"
+      ],
+      "status": "SOURCE_CONFIRMED_START_TIME_IMAGE_AND_ARTICLE_PENDING"
+    }
+  ]
+}
