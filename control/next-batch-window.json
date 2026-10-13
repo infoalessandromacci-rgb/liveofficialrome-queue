@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-10-13",
+  "week_start": "2026-10-19",
+  "week_end": "2026-10-25",
+  "status": "planning_only",
+  "publication_authorized": false,
+  "note": "Planning data only; publication requires a new valid same-day approved publish-request.json after candidates pass checks."
+}
