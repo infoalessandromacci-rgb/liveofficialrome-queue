@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-13T06:59:08.731490+00:00",
+  "checked_at": "2026-10-13T07:08:03.285328+00:00",
   "last_run": {
-    "time": "2026-10-13 06:57:30",
+    "time": "2026-10-13 07:06:23",
     "counts": {
       "published": 0,
       "duplicate": 0,
@@ -12,10 +12,10 @@
     "error_count": 1
   },
   "errors": {
-    "queue/batch-5ef440e7bd80-2026-10-24-minu-jovonn-illuminati.json": {
+    "queue/batch-a1d0cc79e6b7-2026-10-23-j-ax-atlantico.json": {
       "message": "Numero massimo di tentativi raggiunto.",
-      "time": "2026-10-13 06:57:30",
-      "sha": "566b09f02da2709a7db4ad642e3ec7f07e44ed4a",
+      "time": "2026-10-13 07:06:23",
+      "sha": "0096b15d616ca6c434748f23e5885c95ef0f414d",
       "attempts": 2
     }
   },
@@ -44,10 +44,17 @@
     "queue/batch-46a4bbdef480-2026-10-08-controller-03-nubes-able-noise-17-ottobre.json@3de3136aa523939c6e065925557877d2ef527bdc": 2,
     "queue/batch-70340cc08271-2026-10-08-controller-05-mit-contemporaneo-17-ottobre.json@7f2b6d0727e9d406bda7982e5938fea65b300a9d": 2,
     "queue/batch-0dd60c04566c-2026-10-23-j-ax-atlantico.json@9e7ae745444eb4b66bc78543373e58f8412ddec0": 2,
-    "queue/batch-5ef440e7bd80-2026-10-24-minu-jovonn-illuminati.json@566b09f02da2709a7db4ad642e3ec7f07e44ed4a": 2
+    "queue/batch-5ef440e7bd80-2026-10-24-minu-jovonn-illuminati.json@566b09f02da2709a7db4ad642e3ec7f07e44ed4a": 2,
+    "queue/batch-a1d0cc79e6b7-2026-10-23-j-ax-atlantico.json@0096b15d616ca6c434748f23e5885c95ef0f414d": 2
   },
-  "pending_count": 0,
-  "pending": [],
+  "pending_count": 1,
+  "pending": [
+    {
+      "path": "queue/batch-a1d0cc79e6b7-2026-10-23-j-ax-atlantico.json",
+      "sha": "0096b15d616ca6c434748f23e5885c95ef0f414d",
+      "attempts": 2
+    }
+  ],
   "stale_processed_count": 0,
   "stale_processed": [],
   "lock": false,
