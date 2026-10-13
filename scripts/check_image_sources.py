@@ -21,3 +21,5 @@ for url in extra:
    with urllib.request.urlopen(req,timeout=15) as r:
     print(json.dumps({"url":url,"method":method,"status":r.status,"content_type":r.headers.get("Content-Type"),"length":r.headers.get("Content-Length")}),flush=True)
   except Exception as e:print(json.dumps({"url":url,"method":method,"error":str(e)[:150]}),flush=True)
+
+# read-only diagnostic execution
