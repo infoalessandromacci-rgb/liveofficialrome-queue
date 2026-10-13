@@ -5,5 +5,7 @@
   "week_end": "2026-10-25",
   "status": "planning_only",
   "publication_authorized": false,
-  "note": "Planning data only; publication requires a new valid same-day approved publish-request.json after candidates pass checks."
+  "note": "Planning data only; publication requires a new valid same-day approved publish-request.json after candidates pass checks.",
+  "readiness_test_requested_on": "2026-10-13",
+  "readiness_test_purpose": "Exercise non-publishing editorial readiness gate before any real batch"
 }
