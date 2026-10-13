@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "mode": "recover_definitive_failure",
   "approved": true,
-  "created_on": "2026-10-08",
-  "queue": "queue/batch-46a4bbdef480-2026-10-08-controller-03-nubes-able-noise-17-ottobre.json",
-  "candidate": "candidates/2026-10-08-controller-03-nubes-able-noise-17-ottobre.json"
+  "mode": "recover_definitive_failure",
+  "created_on": "2026-10-13",
+  "queue": "queue/batch-a1d0cc79e6b7-2026-10-23-j-ax-atlantico.json",
+  "candidate": "candidates/2026-10-23-j-ax-atlantico.json"
 }
