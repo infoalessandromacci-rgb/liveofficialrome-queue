@@ -62,3 +62,5 @@ jobs:
             git commit -m "Record importer diagnostic (read only)"
             git push origin HEAD:main || (git pull --rebase origin main && git push origin HEAD:main)
           fi
+
+# diagnose current J-Ax retry pending status
