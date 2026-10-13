@@ -1,6 +1,6 @@
 {
   "mode": "publish",
-  "status": "PARTIAL",
+  "status": "HALTED",
   "published": {
     "Teatro e Cinema": {
       "status": "published",
@@ -35,32 +35,29 @@
   },
   "rejected": [],
   "failures": {
-    "2026-10-23-j-ax-atlantico.json": "failed",
-    "Concerti e Live": "No confirmed publication",
-    "2026-10-24-minu-jovonn-illuminati.json": "failed",
-    "Disco e Club": "No confirmed publication"
+    "controller": "Archive file already exists: /home/runner/work/liveofficialrome-queue/liveofficialrome-queue/archive/rejected/2026-10-13/2026-10-23-j-ax-atlantico.json"
   },
   "auth_config": {
     "app_user_present": true,
     "app_password_present": true,
     "bearer_present": false
   },
-  "generated_at": "2026-10-13T06:54:35.705610+00:00",
+  "generated_at": "2026-10-13T07:04:44.621288+00:00",
+  "resumed_from_run_id": "38359408182",
   "week_start": "2026-10-19",
   "week_end": "2026-10-25",
   "available": {
     "Concerti e Live": 1,
-    "Teatro e Cinema": 1,
+    "Teatro e Cinema": 0,
     "Disco e Club": 1,
-    "Musei e Mostre": 1,
-    "Eventi e Manifestazioni": 1
+    "Musei e Mostre": 0,
+    "Eventi e Manifestazioni": 0
   },
   "connection": {
     "user_id": 1,
     "importer_version": "1.2.1",
     "pending_count": 0
   },
-  "count": 3,
-  "github_run_id": "38359408182",
+  "github_run_id": "38360421029",
   "github_trigger": "push"
 }
