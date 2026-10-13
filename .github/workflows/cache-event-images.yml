@@ -1,0 +1,32 @@
+name: Repair and cache approved event images
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'control/media-repair-request.json'
+permissions:
+  contents: write
+concurrency:
+  group: liveofficialrome-importer
+  cancel-in-progress: false
+jobs:
+  cache-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Configure Git author
+        run: |
+          git config user.name "live-rome-controller[bot]"
+          git config user.email "live-rome-controller@users.noreply.github.com"
+      - name: Verify remote images and cache in WordPress media only
+        env:
+          WP_APP_USER: ${{ secrets.WP_APP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        run: python scripts/cache_verified_images.py
