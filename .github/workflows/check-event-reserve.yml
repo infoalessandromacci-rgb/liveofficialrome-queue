@@ -1,0 +1,24 @@
+name: Prepare and validate event reserve
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 6,9,12,16 * * *'
+permissions:
+  contents: read
+jobs:
+  validate-reserve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check editorial reserve without publishing
+        run: python scripts/check_candidate_readiness.py
+      - name: Upload readiness report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: candidate-readiness
+          path: reports/candidate-readiness.json
+          if-no-files-found: warn
