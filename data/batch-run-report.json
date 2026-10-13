@@ -1,58 +1,7 @@
 {
-  "mode": "publish",
-  "status": "COMPLETE",
-  "published": {
-    "Concerti e Live": {
-      "status": "published",
-      "candidate": "2026-10-08-controller-01-speed-stroke-traffic-17-ottobre.json",
-      "post_id": 5740,
-      "url": "https://www.liveofficialrome.it/event/speed-stroke-damage-control-tour-traffic-roma-17-ottobre-2026/",
-      "category": "Concerti e Live",
-      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/traffic_live_prevendite_mailticket.jpg",
-      "words": 1180,
-      "seo_verified": true
-    },
-    "Teatro e Cinema": {
-      "status": "published",
-      "candidate": "2026-10-08-controller-02-pazzo-arte-torlonia-15-ottobre.json",
-      "post_id": 5743,
-      "url": "https://www.liveofficialrome.it/event/pazzo-ad-arte-giuseppe-pestillo-teatro-torlonia-15-ottobre-2026/",
-      "category": "Teatro e Cinema",
-      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/00_Pazzo-Ad-Arte_.png",
-      "words": 1148,
-      "seo_verified": true
-    },
-    "Musei e Mostre": {
-      "status": "published",
-      "candidate": "2026-10-08-controller-04-outlaws-istituto-svizzero-16-ottobre.json",
-      "post_id": 5746,
-      "url": "https://www.liveofficialrome.it/event/outlaws-istituto-svizzero-mostra-roma-16-ottobre-2026/",
-      "category": "Musei e Mostre",
-      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/IS-VINCI_OUTLAWS-Instagram-03-scaled-1.jpg",
-      "words": 1131,
-      "seo_verified": true
-    },
-    "Disco e Club": {
-      "status": "published",
-      "candidate": "2026-10-08-controller-03-giorgia-angiuli-soap-house-16-ottobre.json",
-      "post_id": 5749,
-      "url": "https://www.liveofficialrome.it/event/giorgia-angiuli-live-soap-house-opening-season-roma-16-ottobre-2026/",
-      "category": "Disco e Club",
-      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/portada-Giorgia-Angiuli.webp",
-      "words": 1102,
-      "seo_verified": true
-    },
-    "Eventi e Manifestazioni": {
-      "status": "published",
-      "candidate": "2026-10-08-controller-05-ottobrata-palazzo-massimo-17-ottobre.json",
-      "post_id": 5752,
-      "url": "https://www.liveofficialrome.it/event/ottobrata-romana-palazzo-massimo-apertura-serale-17-ottobre-2026/",
-      "category": "Eventi e Manifestazioni",
-      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/Ottobrata20romana20a20Palazzo20Massimo20copertina.png",
-      "words": 1145,
-      "seo_verified": true
-    }
-  },
+  "mode": "preflight",
+  "status": "CONNECTED",
+  "published": {},
   "rejected": [],
   "failures": {},
   "auth_config": {
@@ -60,23 +9,12 @@
     "app_password_present": true,
     "bearer_present": false
   },
-  "generated_at": "2026-10-08T19:11:42.397045+00:00",
-  "resumed_from_run_id": "37829692557",
-  "week_start": "2026-10-12",
-  "week_end": "2026-10-18",
-  "available": {
-    "Concerti e Live": 0,
-    "Teatro e Cinema": 0,
-    "Disco e Club": 0,
-    "Musei e Mostre": 0,
-    "Eventi e Manifestazioni": 1
-  },
+  "generated_at": "2026-10-13T06:26:42.008033+00:00",
   "connection": {
     "user_id": 1,
     "importer_version": "1.2.1",
     "pending_count": 0
   },
-  "count": 5,
-  "github_run_id": "37830088818",
-  "github_trigger": "push"
+  "github_run_id": "38356715923",
+  "github_trigger": "workflow_dispatch"
 }
