@@ -210,7 +210,8 @@ def finish(path, queue_name, outcome, event=None, post_id=None):
     archived = ROOT / "archive" / ("candidates" if outcome == "published" else "rejected") \
                / dt.datetime.now(ZoneInfo("Europe/Rome")).date().isoformat() / path.name
     if archived.exists():
-        raise BatchFailure("Archive file already exists: " + str(archived))
+        # Preserve prior attempts without overwriting: retry archives need unique identities.
+        archived = archived.with_name(archived.stem + "-retry-" + uuid.uuid4().hex[:10] + archived.suffix)
     archived.parent.mkdir(parents=True, exist_ok=True)
     queued = ROOT / queue_name
     if not queued.is_file() or not path.is_file():
