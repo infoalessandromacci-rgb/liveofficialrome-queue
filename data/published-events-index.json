@@ -2,8 +2,8 @@
   "schema_version": "1.0",
   "generated_on": "2026-10-21",
   "source": "Live Official Rome WordPress — published tribe_events",
-  "total_events": 280,
-  "active_or_future_events": 92,
+  "total_events": 281,
+  "active_or_future_events": 93,
   "purpose": "Pre-filter anti-duplicate before researching, writing or queueing new events.",
   "match_policy": {
     "hard_duplicate": [
@@ -2533,6 +2533,34 @@
         "day_venue": "2026-10-31|teatro vascello",
         "focus_day": "catalogo roma|2026-10-31",
         "url": "romaeuropa.net/festival-2026/catalogo"
+      }
+    },
+    {
+      "post_id": 5775,
+      "title": "El Día de los Muertos da Mama Shelter Roma tra musica e DJ set",
+      "slug": "el-dia-de-los-muertos-mama-shelter-roma-1-novembre-2026",
+      "start": "2026-11-01 19:00:00",
+      "end": "2026-11-01 23:00:00",
+      "start_day": "2026-11-01",
+      "start_time": "19:00:00",
+      "venue_id": null,
+      "venue": "Mama Shelter Roma",
+      "category_ids": [
+        269
+      ],
+      "event_url": "https://it.mamashelter.com/roma/calendario/",
+      "focus_keyphrase": "El Dia de los Muertos Mama Shelter Roma 2026",
+      "normalized": {
+        "title": "el dia de los muertos da mama shelter roma tra musica e dj set",
+        "focus": "el dia de los muertos mama shelter roma 2026",
+        "venue": "mama shelter roma",
+        "event_url": "it.mamashelter.com/roma/calendario"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-11-01 19:00:00|mama shelter roma",
+        "day_venue": "2026-11-01|mama shelter roma",
+        "focus_day": "el dia de los muertos mama shelter roma 2026|2026-11-01",
+        "url": "it.mamashelter.com/roma/calendario"
       }
     },
     {
@@ -10354,6 +10382,34 @@
         "day_venue": "2026-10-31|teatro vascello",
         "focus_day": "catalogo roma|2026-10-31",
         "url": "romaeuropa.net/festival-2026/catalogo"
+      }
+    },
+    {
+      "post_id": 5775,
+      "title": "El Día de los Muertos da Mama Shelter Roma tra musica e DJ set",
+      "slug": "el-dia-de-los-muertos-mama-shelter-roma-1-novembre-2026",
+      "start": "2026-11-01 19:00:00",
+      "end": "2026-11-01 23:00:00",
+      "start_day": "2026-11-01",
+      "start_time": "19:00:00",
+      "venue_id": null,
+      "venue": "Mama Shelter Roma",
+      "category_ids": [
+        269
+      ],
+      "event_url": "https://it.mamashelter.com/roma/calendario/",
+      "focus_keyphrase": "El Dia de los Muertos Mama Shelter Roma 2026",
+      "normalized": {
+        "title": "el dia de los muertos da mama shelter roma tra musica e dj set",
+        "focus": "el dia de los muertos mama shelter roma 2026",
+        "venue": "mama shelter roma",
+        "event_url": "it.mamashelter.com/roma/calendario"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-11-01 19:00:00|mama shelter roma",
+        "day_venue": "2026-11-01|mama shelter roma",
+        "focus_day": "el dia de los muertos mama shelter roma 2026|2026-11-01",
+        "url": "it.mamashelter.com/roma/calendario"
       }
     },
     {
