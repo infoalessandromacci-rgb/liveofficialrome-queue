@@ -3,7 +3,7 @@ import json,re,urllib.request,html,pathlib,datetime
 pages={
 "concert":"https://www.teatro.it/spettacoli/roma/atlantico-live/2026-2027/sayf-santissimo-tour",
 "theater":"https://www.operaroma.it/spettacoli/goecke-robbins-bausch/",
-"club":"https://www.estateromana.com/proposte/halloween-sonja-moonear-circolo-degli-illuminati-31-ottobre-2026/",
+"club":"https://www.estateromana.com/proposte/redrum-halloween-night-lanificio-31-ottobre-2026/",
 "museum":"https://www.museodiromaintrastevere.it/it/mostra-evento/thin-line",
 "manifestation":"https://vive.cultura.gov.it/it/gli-etruschi-di-frontiera-nuove-scoperte-nuove-ricerche-nuove-storie"}
 out={}
