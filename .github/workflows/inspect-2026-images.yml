@@ -1,0 +1,19 @@
+name: Inspect verified 2026 event source images
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/inspect_2026_event_images.py']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python scripts/inspect_2026_event_images.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-image-report
+          path: reports/source-images-2026-10-26.json
