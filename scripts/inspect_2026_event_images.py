@@ -19,3 +19,5 @@ for name,url in pages.items():
 p=pathlib.Path("reports/source-images-2026-10-26.json");p.parent.mkdir(exist_ok=True)
 p.write_text(json.dumps(out,ensure_ascii=False,indent=2))
 print(json.dumps(out,ensure_ascii=False)[:16000])
+
+# one-time non-publishing source verification
