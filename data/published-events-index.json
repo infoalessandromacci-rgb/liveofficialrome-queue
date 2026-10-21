@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-10-13",
+  "generated_on": "2026-10-21",
   "source": "Live Official Rome WordPress — published tribe_events",
-  "total_events": 276,
-  "active_or_future_events": 88,
+  "total_events": 277,
+  "active_or_future_events": 89,
   "purpose": "Pre-filter anti-duplicate before researching, writing or queueing new events.",
   "match_policy": {
     "hard_duplicate": [
@@ -2393,6 +2393,34 @@
         "day_venue": "2026-10-24|fusolab",
         "focus_day": "david rodigan roma 2026|2026-10-24",
         "url": "turismoroma.it/it/eventi/david-rodigan-0"
+      }
+    },
+    {
+      "post_id": 5765,
+      "title": "SAYF porta il Santissimo Tour all'Atlantico di Roma",
+      "slug": "sayf-santissimo-tour-atlantico-roma-27-ottobre-2026",
+      "start": "2026-10-27 21:00:00",
+      "end": "2026-10-27 23:30:00",
+      "start_day": "2026-10-27",
+      "start_time": "21:00:00",
+      "venue_id": null,
+      "venue": "Atlantico",
+      "category_ids": [
+        169
+      ],
+      "event_url": "https://www.livenation.it/event/sayf-santissimo-tour-roma-tickets-edp1655635",
+      "focus_keyphrase": "SAYF Roma 27 ottobre 2026",
+      "normalized": {
+        "title": "sayf porta il santissimo tour all atlantico di roma",
+        "focus": "sayf roma 27 ottobre 2026",
+        "venue": "atlantico",
+        "event_url": "livenation.it/event/sayf-santissimo-tour-roma-tickets-edp1655635"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-27 21:00:00|atlantico",
+        "day_venue": "2026-10-27|atlantico",
+        "focus_day": "sayf roma 27 ottobre 2026|2026-10-27",
+        "url": "livenation.it/event/sayf-santissimo-tour-roma-tickets-edp1655635"
       }
     },
     {
@@ -10102,6 +10130,34 @@
         "day_venue": "2026-10-24|fusolab",
         "focus_day": "david rodigan roma 2026|2026-10-24",
         "url": "turismoroma.it/it/eventi/david-rodigan-0"
+      }
+    },
+    {
+      "post_id": 5765,
+      "title": "SAYF porta il Santissimo Tour all'Atlantico di Roma",
+      "slug": "sayf-santissimo-tour-atlantico-roma-27-ottobre-2026",
+      "start": "2026-10-27 21:00:00",
+      "end": "2026-10-27 23:30:00",
+      "start_day": "2026-10-27",
+      "start_time": "21:00:00",
+      "venue_id": null,
+      "venue": "Atlantico",
+      "category_ids": [
+        169
+      ],
+      "event_url": "https://www.livenation.it/event/sayf-santissimo-tour-roma-tickets-edp1655635",
+      "focus_keyphrase": "SAYF Roma 27 ottobre 2026",
+      "normalized": {
+        "title": "sayf porta il santissimo tour all atlantico di roma",
+        "focus": "sayf roma 27 ottobre 2026",
+        "venue": "atlantico",
+        "event_url": "livenation.it/event/sayf-santissimo-tour-roma-tickets-edp1655635"
+      },
+      "duplicate_keys": {
+        "datetime_venue": "2026-10-27 21:00:00|atlantico",
+        "day_venue": "2026-10-27|atlantico",
+        "focus_day": "sayf roma 27 ottobre 2026|2026-10-27",
+        "url": "livenation.it/event/sayf-santissimo-tour-roma-tickets-edp1655635"
       }
     },
     {
