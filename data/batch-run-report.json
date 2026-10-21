@@ -1,63 +1,82 @@
 {
   "mode": "publish",
-  "status": "HALTED",
+  "status": "PARTIAL",
   "published": {
+    "Concerti e Live": {
+      "status": "published",
+      "candidate": "2026-10-27-sayf-santissimo-tour.json",
+      "post_id": 5765,
+      "url": "https://www.liveofficialrome.it/event/sayf-santissimo-tour-atlantico-roma-27-ottobre-2026/",
+      "category": "Concerti e Live",
+      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/teatroit-sayf-santissimo-tour-2026-concerti-date-biglietti.webp",
+      "words": 888,
+      "seo_verified": true
+    },
     "Teatro e Cinema": {
       "status": "published",
-      "candidate": "2026-10-22-amelie-musical-brancaccio.json",
-      "post_id": 5756,
-      "url": "https://www.liveofficialrome.it/event/amelie-il-musical-teatro-brancaccio-roma-22-ottobre-2026/",
+      "candidate": "2026-10-27-goecke-robbins-bausch.json",
+      "post_id": 5767,
+      "url": "https://www.liveofficialrome.it/event/goecke-robbins-bausch-teatro-opera-roma-27-ottobre-2026/",
       "category": "Teatro e Cinema",
-      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/amelie-1920X560.jpg",
-      "words": 1060,
+      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/Goecke-Robbins-Bausch-2025-2026-2400x870-1-130x95-1.jpg",
+      "words": 900,
       "seo_verified": true
     },
     "Musei e Mostre": {
       "status": "published",
-      "candidate": "2026-10-20-tiziano-galleria-borghese.json",
-      "post_id": 5758,
-      "url": "https://www.liveofficialrome.it/event/tiziano-dialoghi-sacro-profano-galleria-borghese-20-ottobre-2026/",
+      "candidate": "2026-10-28-the-thin-line-museo-trastevere.json",
+      "post_id": 5769,
+      "url": "https://www.liveofficialrome.it/event/the-thin-line-fotografia-museo-roma-trastevere-28-ottobre-2026/",
       "category": "Musei e Mostre",
-      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/Tiziano-Web-e-Social-News-1080x1350-01.jpg",
-      "words": 1006,
+      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/exhibition-rome-echo-a5a520.jpg",
+      "words": 898,
       "seo_verified": true
     },
     "Eventi e Manifestazioni": {
       "status": "published",
-      "candidate": "2026-10-20-collegio-romano-napoli.json",
-      "post_id": 5761,
-      "url": "https://www.liveofficialrome.it/event/collegio-romano-napoli-viaggiatori-cinquecento-20-ottobre-2026/",
+      "candidate": "2026-10-27-etruschi-frontiera-collegio-romano.json",
+      "post_id": 5771,
+      "url": "https://www.liveofficialrome.it/event/etruschi-frontiera-giuseppe-sassatelli-collegio-romano-27-ottobre-2026/",
       "category": "Eventi e Manifestazioni",
-      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/12028129.jpg",
-      "words": 1034,
+      "image": "https://www.liveofficialrome.it/wp-content/uploads/2026/10/12028129-1.jpg",
+      "words": 888,
       "seo_verified": true
     }
   },
-  "rejected": [],
+  "rejected": [
+    {
+      "file": "candidates/2026-10-24-minu-jovonn-illuminati.json",
+      "title": "MINÛ ospita Jovonn al Circolo degli Illuminati con Germano Ventura e Rico",
+      "errors": [
+        "event starts before requested week"
+      ]
+    }
+  ],
   "failures": {
-    "controller": "Archive file already exists: /home/runner/work/liveofficialrome-queue/liveofficialrome-queue/archive/rejected/2026-10-13/2026-10-23-j-ax-atlantico.json"
+    "2026-10-31-minu-halloween-sonja-moonear.json": "failed",
+    "Disco e Club": "No confirmed publication"
   },
   "auth_config": {
     "app_user_present": true,
     "app_password_present": true,
     "bearer_present": false
   },
-  "generated_at": "2026-10-13T07:04:44.621288+00:00",
-  "resumed_from_run_id": "38359408182",
-  "week_start": "2026-10-19",
-  "week_end": "2026-10-25",
+  "generated_at": "2026-10-21T05:36:54.221332+00:00",
+  "week_start": "2026-10-26",
+  "week_end": "2026-11-01",
   "available": {
     "Concerti e Live": 1,
-    "Teatro e Cinema": 0,
+    "Teatro e Cinema": 1,
     "Disco e Club": 1,
-    "Musei e Mostre": 0,
-    "Eventi e Manifestazioni": 0
+    "Musei e Mostre": 1,
+    "Eventi e Manifestazioni": 1
   },
   "connection": {
     "user_id": 1,
     "importer_version": "1.2.1",
     "pending_count": 0
   },
-  "github_run_id": "38360421029",
+  "count": 4,
+  "github_run_id": "39550538411",
   "github_trigger": "push"
 }
