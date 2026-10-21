@@ -8,6 +8,7 @@ extra=[
 "https://images.ra.co/ee288ef5ced7536da901ea24bd182bd029c4100f.jpg",
 "https://imgproxy.ra.co/_/quality%3A66/aHR0cHM6Ly9pbWFnZXMucmEuY28vZWUyODhlZjVjZWQ3NTM2ZGE5MDFlYTI0YmQxODJiZDAyOWM0MTAwZi5qcGc%3D",
 "https://teatrobrancaccio.it/wp-content/uploads/2026/06/amelie-1920X560.jpg"]
+extra.extend(["https://www.teatro.it/images/2026/03/spettacoli/main-image/teatroit-sayf-santissimo-tour-2026-concerti-date-biglietti.jpg","https://operaroma.b-cdn.net/wp-content/uploads/2025/07/Goecke-Robbins-Bausch-2025-2026-2400x870-1-130x95.jpg","https://www.estateromana.com/wp-content/uploads/2026/10/halloween-sonja-moonear-circolo-degli-illuminati-31-ottobre-2026-1.jpg","https://dkemhji6i1k0x.cloudfront.net/000_clients/461308/page/exhibition-rome-echo-a5a520.jpg","https://vive.cultura.gov.it/_cms/sites/default/files/styles/original/public/blocco-intro/1%20%281%29.jpg?itok=IsQG0OmS"])
 seen=set()
 for p in paths:
  d=json.loads((root/p).read_text(encoding="utf-8"))
