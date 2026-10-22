@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-10-22",
+  "week_start": "2026-11-02",
+  "week_end": "2026-11-08",
+  "status": "SOURCE_VERIFIED_DRAFT",
+  "publication_authorized": false,
+  "notes": "Candidates must each be independently verified and receive 800+ original SEO words, official image with HTTP/MIME checks, correct opening/end time and no duplicate before moving to candidates/ or queue/. Bob Dylan and museum hours still need official detailed event-page verification.",
+  "items": [
+    {
+      "category_id": 169,
+      "title": "Bob Dylan torna a Roma al Palazzo dello Sport",
+      "date": "2026-11-05",
+      "time": "21:00",
+      "venue": "Palazzo dello Sport",
+      "address": "Piazzale Pier Luigi Nervi 1, Roma",
+      "source": "https://www.turismoroma.it/it/tipo-evento/musica?page=4",
+      "priority": "A",
+      "image_verified": false
+    },
+    {
+      "category_id": 268,
+      "title": "STARMAN La vera storia di Leon Skum al Teatro Vascello",
+      "date": "2026-11-05",
+      "time": "21:00",
+      "venue": "Teatro Vascello",
+      "address": "Via Giacinto Carini 78, Roma",
+      "source": "https://turismoroma.it/it/eventi/starman-la-vera-storia-di-leon-skum",
+      "priority": "B",
+      "image_verified": false
+    },
+    {
+      "category_id": 269,
+      "title": "FACE x Bazaar84th con Paramida al Circolo degli Illuminati",
+      "date": "2026-11-06",
+      "time": "23:30",
+      "end": "2026-11-07 05:00",
+      "venue": "Circolo degli Illuminati",
+      "address": "Via Giuseppe Libetta 1, Roma",
+      "source": "https://fuori.social/evento/12571",
+      "priority": "B",
+      "entry": "15 euro alla porta, RSVP su Resident Advisor obbligatorio secondo l'organizzatore",
+      "image_verified": false
+    },
+    {
+      "category_id": 271,
+      "title": "Il potere del ritratto Egitto e Roma I volti del Fayum",
+      "date": "2026-11-05",
+      "time": null,
+      "venue": "Museo dell'Ara Pacis",
+      "address": "Lungotevere in Augusta, Roma",
+      "source": "https://www.arapacis.it/it/node",
+      "priority": "A",
+      "period_end": "2027-05-02",
+      "image_verified": false
+    },
+    {
+      "category_id": 270,
+      "title": "VII Muestra de Cine Mexicano alla Casa del Cinema",
+      "date": "2026-11-06",
+      "time": "15:00",
+      "end": "2026-11-08 23:00",
+      "venue": "Casa del Cinema",
+      "address": "Largo Marcello Mastroianni 1, Roma",
+      "source": "https://www.casadelcinema.it/it/event/cine-mexicano-2026/",
+      "priority": "B",
+      "entry": "gratuito fino a esaurimento posti",
+      "image_verified": false
+    }
+  ]
+}
